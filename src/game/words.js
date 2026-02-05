@@ -1,7 +1,6 @@
 let answers = []
 let wordInfoMap = new Map()
 let validWords = new Set()
-let bannedWords = new Set()
 
 function normalizeWordEntry(entry) {
   if (typeof entry === 'string') {
@@ -14,21 +13,7 @@ function normalizeWordEntry(entry) {
   }
 }
 
-async function loadBanList() {
-  try {
-    const res = await fetch('./src/data/banlist.json')
-    if (res.ok) {
-      const data = await res.json()
-      bannedWords = new Set(data.words.map(w => w.toLowerCase()))
-    }
-  } catch (e) {
-    bannedWords = new Set()
-  }
-}
-
 export async function loadWords({ dialect = 'any', wordLength }) {
-  await loadBanList()
-
   const dialects = dialect === 'any' ? ['white', 'green'] : [dialect]
 
   const answerSets = []
@@ -49,19 +34,15 @@ export async function loadWords({ dialect = 'any', wordLength }) {
 
       answersData.words.forEach(entry => {
         const info = normalizeWordEntry(entry)
-        if (!bannedWords.has(info.word)) {
-          answerSets.push(info.word)
-          if (info.definition) {
-            wordInfoMap.set(info.word, info)
-          }
+        answerSets.push(info.word)
+        if (info.definition) {
+          wordInfoMap.set(info.word, info)
         }
       })
 
       guessesData.words.forEach(entry => {
         const info = normalizeWordEntry(entry)
-        if (!bannedWords.has(info.word)) {
-          guessSets.push(info.word)
-        }
+        guessSets.push(info.word)
       })
     })
   )

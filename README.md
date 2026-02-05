@@ -48,7 +48,6 @@ src/
 │   ├── modal.js      # End game modal with word definitions
 │   └── toast.js      # Toast notifications
 ├── data/
-│   ├── banlist.json  # Excluded words (profanity filter)
 │   ├── green/        # Green (Moob Leeg) dialect
 │   │   ├── 4-letter/
 │   │   │   ├── answers.json
