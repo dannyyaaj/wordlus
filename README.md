@@ -1,6 +1,6 @@
 # Wordlus
 
-A Wordle-style word game for the Hmong language.
+A daily word game for the Hmong language.
 
 **Play. Learn. Preserve Hmong language.**
 
@@ -17,23 +17,25 @@ A Wordle-style word game for the Hmong language.
 ## Features
 
 - 4-letter and 5-letter word modes
+- Green (Mong Leeg) and White (Hmong Dawb) dialect support
 - Game state persists across sessions
-- On-screen keyboard with color feedback
+- On screen keyboard with color feedback
 - Physical keyboard support
-- Mobile-first responsive design
-- Respects prefers-reduced-motion
+- Mobile first responsive design
 
 ## Running Locally
 
+Open `index.html` in your browser, or run a local server:
+
 ```bash
-npx serve .
+npx serve@14.2.5 .
 ```
 
 Then open http://localhost:3000
 
 ## Project Structure
 
-```
+```markdown
 src/
 ├── game/
 │   ├── rules.js      # Pure evaluation logic
@@ -45,12 +47,57 @@ src/
 │   ├── modal.js      # Mode selection + end game modals
 │   └── toast.js      # Toast notifications
 ├── data/
-│   ├── words-4-answers.json
-│   ├── words-4-guesses.json
-│   ├── words-5-answers.json
-│   └── words-5-guesses.json
+│   ├── green/        # Green (Mong Leng) dialect
+│   │   ├── 4-letter/
+│   │   │   ├── answers.json
+│   │   │   └── guesses.json
+│   │   └── 5-letter/
+│   │       ├── answers.json
+│   │       └── guesses.json
+│   └── white/        # White (Hmong Daw) dialect
+│       ├── 4-letter/
+│       │   ├── answers.json
+│       │   └── guesses.json
+│       └── 5-letter/
+│           ├── answers.json
+│           └── guesses.json
 └── index.js          # Main entry point
 ```
+
+## Learning & Philosophy
+
+Wordlus is a learning first project.
+
+This repository is intentionally kept simple, readable, and framework light so that:
+
+- new developers can understand how a word game works
+- learners can explore how language focused games are built
+- the Hmong language is represented thoughtfully in modern software
+
+### On Language & Correctness
+
+Hmong, like all living languages, has dialects, variations, and evolving usage.
+The word lists used in Wordlus are **curated for playability**, not authority.
+
+No single list is considered definitive.
+Words are chosen because they are:
+
+- commonly recognized
+- appropriate for a guessing game
+- reasonably learnable by players
+
+The goal is not to judge correctness, but to encourage use, curiosity, and learning.
+
+### On Simplicity
+
+Wordlus prioritizes:
+
+- clarity over cleverness
+- accessibility over complexity
+- shipping over perfection
+
+This is a game first, and a teaching tool second.
+If something feels fun, fair, and respectful, it is probably the right choice.
 
 ## Word Sources
 
