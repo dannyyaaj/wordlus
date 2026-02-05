@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Wordlus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">Wordlus</h1>
+    <nav class="nav-controls">
+      <div class="control-group control-group--primary">
+        <span class="control-label">Word Length</span>
+        <div class="toggle-group">
+          <button class="toggle-btn toggle-btn--lg active" data-length="4">4 Letters</button>
+          <button class="toggle-btn toggle-btn--lg" data-length="5">5 Letters</button>
+        </div>
+      </div>
+      <div class="control-group">
+        <span class="control-label">Dialect</span>
+        <div class="toggle-group">
+          <button class="toggle-btn active" data-dialect="any">Any</button>
+          <button class="toggle-btn" data-dialect="white">White</button>
+          <button class="toggle-btn" data-dialect="green">Green</button>
+        </div>
+        <span class="control-hint">Any = common words across dialects</span>
+      </div>
+    </nav>
+  </header>
+  <main class="game">
+    <div id="grid" class="grid"></div>
+    <div id="keyboard" class="keyboard"></div>
+  </main>
+  <script type="module" src="./src/index.js"></script>
+</body>
+</html>

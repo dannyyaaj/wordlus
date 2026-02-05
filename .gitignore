@@ -1,0 +1,11 @@
+.DS_Store
+.claude
+node_modules
+dist
+.env
+.env.local
+*.log
+.idea
+.vscode
+*.iml
+.playwright-mcp
