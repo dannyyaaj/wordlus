@@ -21,6 +21,7 @@ import { createKeyboard, setupPhysicalKeyboard, updateKeyboardColors } from './u
 import { showEndModal } from './ui/modal.js'
 import { showToast } from './ui/toast.js'
 import { showHowToPlay } from './ui/howToPlay.js'
+import { trackGameStarted, trackGameCompleted, trackModeSelected } from './analytics.js'
 
 let state = null
 
@@ -92,6 +93,7 @@ function setupNavTabs() {
 async function switchGame({ dialect, wordLength }) {
   setPreferredDialect(dialect)
   setPreferredWordLength(wordLength)
+  trackModeSelected(dialect, wordLength)
 
   const savedState = loadState(wordLength, dialect)
 
@@ -113,6 +115,7 @@ async function startGame({ dialect, wordLength, forceNew = false }) {
   createGrid(gridEl, wordLength)
   createKeyboard(keyboardEl, handleKey)
   updateNavTabs(dialect, wordLength)
+  trackGameStarted(dialect, wordLength)
 
   if (!DEBUG_MODE || !forceNew) {
     saveState(state)
@@ -185,9 +188,11 @@ function handleSubmit() {
     updateKeyboardColors(keyboardEl, state.usedLetters)
 
     if (state.status === 'won') {
+      trackGameCompleted(true, state.guesses.length, state.dialect, state.wordLength)
       showToast('Zoo heev!', 2000)
       setTimeout(() => showEndModal(state, getWordInfo(state.answer), DEBUG_MODE ? handleNewGame : null), 1000)
     } else if (state.status === 'lost') {
+      trackGameCompleted(false, state.guesses.length, state.dialect, state.wordLength)
       showToast(state.answer.toUpperCase(), 3000)
       setTimeout(() => showEndModal(state, getWordInfo(state.answer), DEBUG_MODE ? handleNewGame : null), 1500)
     }

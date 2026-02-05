@@ -119,6 +119,12 @@ The Hmong word lists were compiled from:
 - localStorage for persistence
 - No build tools required
 
+## Privacy
+
+Wordlus uses anonymous analytics to understand general usage. We do not track individual users, store personal information, or collect typed guesses.
+
+See [PRIVACY.md](PRIVACY.md) for details.
+
 ## License
 
 MIT
