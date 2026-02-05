@@ -106,6 +106,11 @@ The Hmong word lists were compiled from:
 
 - [1000 Most Common Hmong Words](https://1000mostcommonwords.com/1000-most-common-hmong-words/)
 - [Study Hmong A-Z Dictionary](https://studyhmong.com/a-to-z-dictionary/)
+- [World Loanword Database - White Hmong Vocabulary](https://wold.clld.org/vocabulary/25)
+- [101 Languages - Hmong Word List](https://www.101languages.net/hmong/hmong-word-list/)
+- [DCE Hmong - Common Words/Phrases](https://dcehmong.weebly.com/common-hmong-wordsphrases.html)
+- [Study Hmong - The Hmong Alphabet](https://studyhmong.com/the-hmong-alphabet/)
+- [Study Hmong - External Anatomy](https://studyhmong.com/external-anatomy/)
 
 ## Tech Stack
 
