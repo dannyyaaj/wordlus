@@ -1,4 +1,4 @@
-export function showHelpModal() {
+export function showHowToPlay() {
   const overlay = document.createElement('div')
   overlay.className = 'modal-overlay'
 

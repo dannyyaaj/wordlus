@@ -20,7 +20,7 @@ import { createGrid, renderState, updateCurrentRow, revealRow, shakeRow } from '
 import { createKeyboard, setupPhysicalKeyboard, updateKeyboardColors } from './ui/keyboard.js'
 import { showEndModal } from './ui/modal.js'
 import { showToast } from './ui/toast.js'
-import { showHelpModal } from './ui/help.js'
+import { showHowToPlay } from './ui/howToPlay.js'
 
 let state = null
 
@@ -54,7 +54,7 @@ function setupThemeToggle() {
 
 function setupHelpButton() {
   helpBtnEl.addEventListener('click', () => {
-    showHelpModal()
+    showHowToPlay()
   })
 }
 
