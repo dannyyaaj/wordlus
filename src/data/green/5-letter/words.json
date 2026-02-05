@@ -1,0 +1,908 @@
+{
+  "words": [
+    {
+      "word": "chaws",
+      "isAnswer": true
+    },
+    {
+      "word": "cheem",
+      "isAnswer": true
+    },
+    {
+      "word": "dheev",
+      "isAnswer": true
+    },
+    {
+      "word": "dhuav",
+      "isAnswer": true
+    },
+    {
+      "word": "hlais",
+      "isAnswer": true
+    },
+    {
+      "word": "hlaws",
+      "isAnswer": true
+    },
+    {
+      "word": "hlawv",
+      "isAnswer": true
+    },
+    {
+      "word": "hloov",
+      "isAnswer": true
+    },
+    {
+      "word": "hluas",
+      "isAnswer": true
+    },
+    {
+      "word": "hluav",
+      "isAnswer": true
+    },
+    {
+      "word": "hmoob",
+      "isAnswer": true
+    },
+    {
+      "word": "hmoov",
+      "isAnswer": true
+    },
+    {
+      "word": "hneev",
+      "isAnswer": true
+    },
+    {
+      "word": "hniav",
+      "isAnswer": true
+    },
+    {
+      "word": "hnyav",
+      "isAnswer": true
+    },
+    {
+      "word": "hnyos",
+      "isAnswer": true
+    },
+    {
+      "word": "hnyuv",
+      "isAnswer": true
+    },
+    {
+      "word": "khaub",
+      "isAnswer": true
+    },
+    {
+      "word": "khaum",
+      "isAnswer": true
+    },
+    {
+      "word": "khawb",
+      "isAnswer": true
+    },
+    {
+      "word": "khaws",
+      "isAnswer": true
+    },
+    {
+      "word": "khawv",
+      "isAnswer": true
+    },
+    {
+      "word": "kheev",
+      "isAnswer": true
+    },
+    {
+      "word": "khiab",
+      "isAnswer": true
+    },
+    {
+      "word": "khiav",
+      "isAnswer": true
+    },
+    {
+      "word": "khoom",
+      "isAnswer": true
+    },
+    {
+      "word": "khoov",
+      "isAnswer": true
+    },
+    {
+      "word": "mloog",
+      "isAnswer": true
+    },
+    {
+      "word": "ncaim",
+      "isAnswer": true
+    },
+    {
+      "word": "ncauj",
+      "isAnswer": true
+    },
+    {
+      "word": "ncaws",
+      "isAnswer": true
+    },
+    {
+      "word": "nchav",
+      "isAnswer": true
+    },
+    {
+      "word": "ncooj",
+      "isAnswer": true
+    },
+    {
+      "word": "ncuav",
+      "isAnswer": true
+    },
+    {
+      "word": "nkaub",
+      "isAnswer": true
+    },
+    {
+      "word": "nkaug",
+      "isAnswer": true
+    },
+    {
+      "word": "nkauj",
+      "isAnswer": true
+    },
+    {
+      "word": "nkaum",
+      "isAnswer": true
+    },
+    {
+      "word": "nkaus",
+      "isAnswer": true
+    },
+    {
+      "word": "nkawd",
+      "isAnswer": true
+    },
+    {
+      "word": "nkawm",
+      "isAnswer": true
+    },
+    {
+      "word": "nkawv",
+      "isAnswer": true
+    },
+    {
+      "word": "nkeeg",
+      "isAnswer": true
+    },
+    {
+      "word": "nkees",
+      "isAnswer": true
+    },
+    {
+      "word": "nkuaj",
+      "isAnswer": true
+    },
+    {
+      "word": "npaug",
+      "isAnswer": true
+    },
+    {
+      "word": "npaum",
+      "isAnswer": true
+    },
+    {
+      "word": "nphob",
+      "isAnswer": true
+    },
+    {
+      "word": "npias",
+      "isAnswer": true
+    },
+    {
+      "word": "npleg",
+      "isAnswer": true
+    },
+    {
+      "word": "nplej",
+      "isAnswer": true
+    },
+    {
+      "word": "nplig",
+      "isAnswer": true
+    },
+    {
+      "word": "nplij",
+      "isAnswer": true
+    },
+    {
+      "word": "nplua",
+      "isAnswer": true
+    },
+    {
+      "word": "npuab",
+      "isAnswer": true
+    },
+    {
+      "word": "npuas",
+      "isAnswer": true
+    },
+    {
+      "word": "npuav",
+      "isAnswer": true
+    },
+    {
+      "word": "nqaij",
+      "isAnswer": true
+    },
+    {
+      "word": "nqeeb",
+      "isAnswer": true
+    },
+    {
+      "word": "nqhis",
+      "isAnswer": true
+    },
+    {
+      "word": "nquab",
+      "isAnswer": true
+    },
+    {
+      "word": "nquag",
+      "isAnswer": true
+    },
+    {
+      "word": "nraud",
+      "isAnswer": true
+    },
+    {
+      "word": "nraug",
+      "isAnswer": true
+    },
+    {
+      "word": "nraum",
+      "isAnswer": true
+    },
+    {
+      "word": "nrawm",
+      "isAnswer": true
+    },
+    {
+      "word": "nriaj",
+      "isAnswer": true
+    },
+    {
+      "word": "nroog",
+      "isAnswer": true
+    },
+    {
+      "word": "nruab",
+      "isAnswer": true
+    },
+    {
+      "word": "ntais",
+      "isAnswer": true
+    },
+    {
+      "word": "ntaiv",
+      "isAnswer": true
+    },
+    {
+      "word": "ntaub",
+      "isAnswer": true
+    },
+    {
+      "word": "ntaug",
+      "isAnswer": true
+    },
+    {
+      "word": "ntaus",
+      "isAnswer": true
+    },
+    {
+      "word": "ntawd",
+      "isAnswer": true
+    },
+    {
+      "word": "ntawm",
+      "isAnswer": true
+    },
+    {
+      "word": "ntaws",
+      "isAnswer": true
+    },
+    {
+      "word": "ntawv",
+      "isAnswer": true
+    },
+    {
+      "word": "nthab",
+      "isAnswer": true
+    },
+    {
+      "word": "nthee",
+      "isAnswer": true
+    },
+    {
+      "word": "nthos",
+      "isAnswer": true
+    },
+    {
+      "word": "ntiag",
+      "isAnswer": true
+    },
+    {
+      "word": "ntiaj",
+      "isAnswer": true
+    },
+    {
+      "word": "ntiav",
+      "isAnswer": true
+    },
+    {
+      "word": "ntoos",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsaj",
+      "isAnswer": true
+    },
+    {
+      "word": "ntseg",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsej",
+      "isAnswer": true
+    },
+    {
+      "word": "ntses",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsev",
+      "isAnswer": true
+    },
+    {
+      "word": "ntshe",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsia",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsib",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsig",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsim",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsis",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsug",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsuj",
+      "isAnswer": true
+    },
+    {
+      "word": "ntswg",
+      "isAnswer": true
+    },
+    {
+      "word": "ntswj",
+      "isAnswer": true
+    },
+    {
+      "word": "ntsws",
+      "isAnswer": true
+    },
+    {
+      "word": "ntswv",
+      "isAnswer": true
+    },
+    {
+      "word": "ntuag",
+      "isAnswer": true
+    },
+    {
+      "word": "ntuas",
+      "isAnswer": true
+    },
+    {
+      "word": "ntuav",
+      "isAnswer": true
+    },
+    {
+      "word": "ntxhw",
+      "isAnswer": true
+    },
+    {
+      "word": "ntxim",
+      "isAnswer": true
+    },
+    {
+      "word": "ntxiv",
+      "isAnswer": true
+    },
+    {
+      "word": "ntxoo",
+      "isAnswer": true
+    },
+    {
+      "word": "ntxov",
+      "isAnswer": true
+    },
+    {
+      "word": "ntxub",
+      "isAnswer": true
+    },
+    {
+      "word": "ntxwg",
+      "isAnswer": true
+    },
+    {
+      "word": "nyaum",
+      "isAnswer": true
+    },
+    {
+      "word": "nyeem",
+      "isAnswer": true
+    },
+    {
+      "word": "nyhuv",
+      "isAnswer": true
+    },
+    {
+      "word": "nyiag",
+      "isAnswer": true
+    },
+    {
+      "word": "nyiaj",
+      "isAnswer": true
+    },
+    {
+      "word": "nyiam",
+      "isAnswer": true
+    },
+    {
+      "word": "nyias",
+      "isAnswer": true
+    },
+    {
+      "word": "nyoos",
+      "isAnswer": true
+    },
+    {
+      "word": "nyuab",
+      "isAnswer": true
+    },
+    {
+      "word": "nyuaj",
+      "isAnswer": true
+    },
+    {
+      "word": "phais",
+      "isAnswer": true
+    },
+    {
+      "word": "phaus",
+      "isAnswer": true
+    },
+    {
+      "word": "phaws",
+      "isAnswer": true
+    },
+    {
+      "word": "phawv",
+      "isAnswer": true
+    },
+    {
+      "word": "pheem",
+      "isAnswer": true
+    },
+    {
+      "word": "pheev",
+      "isAnswer": true
+    },
+    {
+      "word": "phiab",
+      "isAnswer": true
+    },
+    {
+      "word": "phoob",
+      "isAnswer": true
+    },
+    {
+      "word": "phooj",
+      "isAnswer": true
+    },
+    {
+      "word": "phoos",
+      "isAnswer": true
+    },
+    {
+      "word": "phuab",
+      "isAnswer": true
+    },
+    {
+      "word": "phuam",
+      "isAnswer": true
+    },
+    {
+      "word": "plaub",
+      "isAnswer": true
+    },
+    {
+      "word": "plaus",
+      "isAnswer": true
+    },
+    {
+      "word": "plawv",
+      "isAnswer": true
+    },
+    {
+      "word": "plees",
+      "isAnswer": true
+    },
+    {
+      "word": "plhis",
+      "isAnswer": true
+    },
+    {
+      "word": "pliaj",
+      "isAnswer": true
+    },
+    {
+      "word": "pluag",
+      "isAnswer": true
+    },
+    {
+      "word": "pluas",
+      "isAnswer": true
+    },
+    {
+      "word": "qhais",
+      "isAnswer": true
+    },
+    {
+      "word": "qhaub",
+      "isAnswer": true
+    },
+    {
+      "word": "qhaus",
+      "isAnswer": true
+    },
+    {
+      "word": "qhauv",
+      "isAnswer": true
+    },
+    {
+      "word": "qhawv",
+      "isAnswer": true
+    },
+    {
+      "word": "qhiab",
+      "isAnswer": true
+    },
+    {
+      "word": "qhoos",
+      "isAnswer": true
+    },
+    {
+      "word": "qhuab",
+      "isAnswer": true
+    },
+    {
+      "word": "qhuas",
+      "isAnswer": true
+    },
+    {
+      "word": "qhuav",
+      "isAnswer": true
+    },
+    {
+      "word": "rhuav",
+      "isAnswer": true
+    },
+    {
+      "word": "thaij",
+      "isAnswer": true
+    },
+    {
+      "word": "thaiv",
+      "isAnswer": true
+    },
+    {
+      "word": "thaum",
+      "isAnswer": true
+    },
+    {
+      "word": "thawj",
+      "isAnswer": true
+    },
+    {
+      "word": "thawv",
+      "isAnswer": true
+    },
+    {
+      "word": "theej",
+      "isAnswer": true
+    },
+    {
+      "word": "theem",
+      "isAnswer": true
+    },
+    {
+      "word": "thiab",
+      "isAnswer": true
+    },
+    {
+      "word": "thiaj",
+      "isAnswer": true
+    },
+    {
+      "word": "thoob",
+      "isAnswer": true
+    },
+    {
+      "word": "thuaj",
+      "isAnswer": true
+    },
+    {
+      "word": "thuas",
+      "isAnswer": true
+    },
+    {
+      "word": "tsaug",
+      "isAnswer": true
+    },
+    {
+      "word": "tsaus",
+      "isAnswer": true
+    },
+    {
+      "word": "tsauv",
+      "isAnswer": true
+    },
+    {
+      "word": "tsawg",
+      "isAnswer": true
+    },
+    {
+      "word": "tsawm",
+      "isAnswer": true
+    },
+    {
+      "word": "tsaws",
+      "isAnswer": true
+    },
+    {
+      "word": "tsawv",
+      "isAnswer": true
+    },
+    {
+      "word": "tseeb",
+      "isAnswer": true
+    },
+    {
+      "word": "tseem",
+      "isAnswer": true
+    },
+    {
+      "word": "tshab",
+      "isAnswer": true
+    },
+    {
+      "word": "tshaj",
+      "isAnswer": true
+    },
+    {
+      "word": "tshav",
+      "isAnswer": true
+    },
+    {
+      "word": "tsheb",
+      "isAnswer": true
+    },
+    {
+      "word": "tshee",
+      "isAnswer": true
+    },
+    {
+      "word": "tsheg",
+      "isAnswer": true
+    },
+    {
+      "word": "tshem",
+      "isAnswer": true
+    },
+    {
+      "word": "tshev",
+      "isAnswer": true
+    },
+    {
+      "word": "tshib",
+      "isAnswer": true
+    },
+    {
+      "word": "tshim",
+      "isAnswer": true
+    },
+    {
+      "word": "tshob",
+      "isAnswer": true
+    },
+    {
+      "word": "tshoj",
+      "isAnswer": true
+    },
+    {
+      "word": "tshom",
+      "isAnswer": true
+    },
+    {
+      "word": "tshov",
+      "isAnswer": true
+    },
+    {
+      "word": "tshua",
+      "isAnswer": true
+    },
+    {
+      "word": "tshwm",
+      "isAnswer": true
+    },
+    {
+      "word": "tshwv",
+      "isAnswer": true
+    },
+    {
+      "word": "tsiab",
+      "isAnswer": true
+    },
+    {
+      "word": "tsiaj",
+      "isAnswer": true
+    },
+    {
+      "word": "tsuas",
+      "isAnswer": true
+    },
+    {
+      "word": "twawb",
+      "isAnswer": true
+    },
+    {
+      "word": "txaij",
+      "isAnswer": true
+    },
+    {
+      "word": "txais",
+      "isAnswer": true
+    },
+    {
+      "word": "txaus",
+      "isAnswer": true
+    },
+    {
+      "word": "txawj",
+      "isAnswer": true
+    },
+    {
+      "word": "txawm",
+      "isAnswer": true
+    },
+    {
+      "word": "txawv",
+      "isAnswer": true
+    },
+    {
+      "word": "txeeb",
+      "isAnswer": true
+    },
+    {
+      "word": "txeem",
+      "isAnswer": true
+    },
+    {
+      "word": "txhab",
+      "isAnswer": true
+    },
+    {
+      "word": "txhaj",
+      "isAnswer": true
+    },
+    {
+      "word": "txham",
+      "isAnswer": true
+    },
+    {
+      "word": "txhas",
+      "isAnswer": true
+    },
+    {
+      "word": "txhim",
+      "isAnswer": true
+    },
+    {
+      "word": "txhob",
+      "isAnswer": true
+    },
+    {
+      "word": "txhua",
+      "isAnswer": true
+    },
+    {
+      "word": "txhuv",
+      "isAnswer": true
+    },
+    {
+      "word": "txhwj",
+      "isAnswer": true
+    },
+    {
+      "word": "txiab",
+      "isAnswer": true
+    },
+    {
+      "word": "txiag",
+      "isAnswer": true
+    },
+    {
+      "word": "txiaj",
+      "isAnswer": true
+    },
+    {
+      "word": "txias",
+      "isAnswer": true
+    },
+    {
+      "word": "txiav",
+      "isAnswer": true
+    },
+    {
+      "word": "txoob",
+      "isAnswer": true
+    },
+    {
+      "word": "txoos",
+      "isAnswer": true
+    },
+    {
+      "word": "txuag",
+      "isAnswer": true
+    },
+    {
+      "word": "txuam",
+      "isAnswer": true
+    },
+    {
+      "word": "txuas",
+      "isAnswer": true
+    },
+    {
+      "word": "xyaum",
+      "isAnswer": true
+    },
+    {
+      "word": "xyeem",
+      "isAnswer": true
+    },
+    {
+      "word": "xyoob",
+      "isAnswer": true
+    },
+    {
+      "word": "xyuas",
+      "isAnswer": true
+    }
+  ]
+}

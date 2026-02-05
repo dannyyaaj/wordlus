@@ -50,18 +50,14 @@ src/
 ├── data/
 │   ├── green/        # Green (Moob Leeg) dialect
 │   │   ├── 4-letter/
-│   │   │   ├── answers.json
-│   │   │   └── guesses.json
+│   │   │   └── words.json
 │   │   └── 5-letter/
-│   │       ├── answers.json
-│   │       └── guesses.json
+│   │       └── words.json
 │   └── white/        # White (Hmoob Dawb) dialect
 │       ├── 4-letter/
-│       │   ├── answers.json
-│       │   └── guesses.json
+│       │   └── words.json
 │       └── 5-letter/
-│           ├── answers.json
-│           └── guesses.json
+│           └── words.json
 └── index.js          # Main entry point
 ```
 
@@ -111,6 +107,57 @@ The Hmong word lists were compiled from:
 - [DCE Hmong - Common Words/Phrases](https://dcehmong.weebly.com/common-hmong-wordsphrases.html)
 - [Study Hmong - The Hmong Alphabet](https://studyhmong.com/the-hmong-alphabet/)
 - [Study Hmong - External Anatomy](https://studyhmong.com/external-anatomy/)
+
+## Word List Management
+
+Word lists are managed in Google Sheets and exported to JSON for the game. This allows for collaborative editing, review workflows, and preserving word history.
+
+### Exporting to CSV
+
+Run the migration script to generate CSV files for Google Sheets:
+
+```bash
+node scripts/generate-sheets-csv.js
+```
+
+This creates 4 CSV files in `csv-export/`:
+
+- `white_4_words.csv`
+- `white_5_words.csv`
+- `green_4_words.csv`
+- `green_5_words.csv`
+
+### Schema
+
+Each word has 5 fields:
+
+| Field | Purpose |
+|-------|---------|
+| `word` | The game - what players guess |
+| `isAnswer` | Fairness - can this be a daily solution? |
+| `enabled` | Control - is this word active? |
+| `definition` | Learning - helps players understand |
+| `partOfSpeech` | Learning - noun, verb, adj, etc. |
+
+### Enabled vs Answer
+
+These are independent flags:
+
+| enabled | isAnswer | Meaning |
+|---------|----------|---------|
+| TRUE | TRUE | Active daily solution |
+| TRUE | FALSE | Valid guess only |
+| FALSE | TRUE/FALSE | Ignored entirely |
+
+**Why `enabled` matters:**
+
+- **Reversible decisions** - disable instead of delete, discuss later
+- **Soft moderation** - "not using right now" ≠ "this word is wrong"
+- **Safe contributions** - disable one bad word without reverting a batch
+- **Review workflows** - new words start disabled until approved
+- **Preserves knowledge** - disabled words remain searchable and documented
+
+For a language preservation project, this distinction matters. Disabled words keep their history and context intact.
 
 ## Tech Stack
 

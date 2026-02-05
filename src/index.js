@@ -98,7 +98,7 @@ async function switchGame({ dialect, wordLength }) {
   const savedState = loadState(wordLength, dialect)
 
   if (savedState && isTodaysGame(savedState)) {
-    await restoreGame(savedState)
+    await restoreGame(savedState, { showModal: false })
   } else {
     await startGame({ dialect, wordLength })
   }
@@ -122,7 +122,7 @@ async function startGame({ dialect, wordLength, forceNew = false }) {
   }
 }
 
-async function restoreGame(savedState) {
+async function restoreGame(savedState, { showModal = true } = {}) {
   const dialect = savedState.dialect || 'any'
   const wordLength = savedState.wordLength
   await loadWords({ dialect, wordLength })
@@ -142,7 +142,7 @@ async function restoreGame(savedState) {
   updateKeyboardColors(keyboardEl, state.usedLetters)
   updateNavTabs(dialect, wordLength)
 
-  if (state.status !== 'playing') {
+  if (showModal && state.status !== 'playing') {
     setTimeout(() => showEndModal(state, getWordInfo(state.answer), null), 500)
   }
 }
