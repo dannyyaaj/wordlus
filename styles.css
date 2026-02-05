@@ -1,11 +1,34 @@
 :root {
-  --color-correct: #538d4e;
-  --color-present: #b59f3b;
-  --color-absent: #3a3a3c;
-  --color-border: #3a3a3c;
+  --color-correct: #4b3f72;
+  --color-present: #b6b1a9;
+  --color-absent: #2f2f33;
+  --color-accent: #6f5fa0;
+  --color-border: #3a3a3a;
   --color-bg: #121213;
   --color-text: #ffffff;
-  --color-key-bg: #818384;
+  --color-key-bg: #7a7a7d;
+  --color-key-text: #ffffff;
+  --color-toggle-bg: #2a2a2b;
+  --color-toggle-text: #9a9a9a;
+  --color-toggle-active-bg: #e5e5e5;
+  --color-toggle-active-text: #111;
+}
+
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1b;
+
+  --color-correct: #6a5fa3;
+  --color-border: #d3d6da;
+  --color-absent: #8a8d91;
+
+  --color-key-bg: #d3d6da;
+  --color-key-text: #1a1a1b;
+
+  --color-toggle-bg: #e5e5e5;
+  --color-toggle-text: #555;
+  --color-toggle-active-bg: #1a1a1b;
+  --color-toggle-active-text: #ffffff;
 }
 
 * {
@@ -14,18 +37,32 @@
   padding: 0;
 }
 
+html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
-  min-height: 100vh;
+}
+
+.game {
+  position: relative;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .header {
-  padding: 16px 12px 20px;
+  padding: 16px 0 8px;
   text-align: center;
+  width: 100%;
 }
 
 .title {
@@ -39,8 +76,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 12px;
+  margin-top: 12px;
+  transform: scale(0.92);
+  opacity: 0.9;
 }
 
 .control-group {
@@ -66,7 +105,7 @@ body {
 .toggle-group {
   display: flex;
   gap: 4px;
-  background: #2a2a2b;
+  background: var(--color-toggle-bg);
   border-radius: 12px;
   padding: 4px;
 }
@@ -80,18 +119,18 @@ body {
   border: none;
   border-radius: 10px;
   background: transparent;
-  color: #888;
+  color: var(--color-toggle-text);
   cursor: pointer;
   transition: background 0.15s, color 0.15s, box-shadow 0.15s;
 }
 
 .toggle-btn:hover {
-  color: #bbb;
+  opacity: 0.8;
 }
 
 .toggle-btn.active {
-  background: #e5e5e5;
-  color: #111;
+  background: var(--color-toggle-active-bg);
+  color: var(--color-toggle-active-text);
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
@@ -102,38 +141,35 @@ body {
   min-height: 48px;
 }
 
-.game {
+.play-area {
   flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  max-width: 500px;
-  margin: 0 auto;
+  justify-content: center;
   width: 100%;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .grid {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin: 20px 0;
+  gap: 6px;
 }
 
 .grid-row {
   display: flex;
-  gap: 5px;
+  gap: 6px;
 }
 
 .grid-cell {
-  width: 52px;
-  height: 52px;
+  width: 58px;
+  height: 58px;
   border: 2px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -158,11 +194,22 @@ body {
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20% { transform: translateX(-8px); }
-  40% { transform: translateX(8px); }
-  60% { transform: translateX(-8px); }
-  80% { transform: translateX(8px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-8px);
+  }
+  40% {
+    transform: translateX(8px);
+  }
+  60% {
+    transform: translateX(-8px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
 }
 
 .keyboard {
@@ -171,6 +218,7 @@ body {
   gap: 6px;
   width: 100%;
   max-width: 484px;
+  margin-bottom: 12px;
 }
 
 .keyboard-row {
@@ -204,6 +252,24 @@ body {
 .key-wide {
   flex: 1.5;
   font-size: 11px;
+  font-weight: 600;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--color-toggle-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
 }
 
 .key[data-state="correct"] {
@@ -280,7 +346,6 @@ body {
   background: var(--color-correct);
 }
 
-
 .toast-container {
   position: fixed;
   top: 80px;
@@ -313,9 +378,9 @@ body {
 
 @media (max-width: 400px) {
   .grid-cell {
-    width: 48px;
-    height: 48px;
-    font-size: 24px;
+    width: 52px;
+    height: 52px;
+    font-size: 26px;
   }
 
   .key {
@@ -331,6 +396,53 @@ body {
   .toggle-btn--lg {
     padding: 12px 16px;
     font-size: 14px;
+  }
+}
+
+@media (max-height: 700px) {
+  .header {
+    padding: 8px 0 4px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .nav-controls {
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .toggle-btn {
+    padding: 8px 12px;
+    min-height: 38px;
+  }
+
+  .toggle-btn--lg {
+    padding: 10px 16px;
+    min-height: 42px;
+  }
+
+  .control-hint {
+    display: none;
+  }
+
+  .grid-cell {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .grid {
+    gap: 5px;
+  }
+
+  .key {
+    height: 48px;
+  }
+
+  .keyboard {
+    margin-bottom: 8px;
   }
 }
 

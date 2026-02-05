@@ -13,6 +13,10 @@ export async function loadWords({ dialect = 'any', wordLength }) {
         fetch(`./src/data/${d}/${wordLength}-letter/answers.json`),
         fetch(`./src/data/${d}/${wordLength}-letter/guesses.json`)
       ])
+      if (!answersRes.ok || !guessesRes.ok) {
+        console.error(`Failed to load word lists for ${d}/${wordLength}-letter`)
+        return
+      }
       const answersData = await answersRes.json()
       const guessesData = await guessesRes.json()
       answerSets.push(...answersData.words.map(w => w.toLowerCase()))

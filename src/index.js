@@ -24,6 +24,29 @@ let state = null
 
 const gridEl = document.getElementById('grid')
 const keyboardEl = document.getElementById('keyboard')
+const themeToggleEl = document.getElementById('theme-toggle')
+
+function getPreferredTheme() {
+  const saved = localStorage.getItem('wordlus-theme')
+  if (saved) return saved
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+}
+
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme)
+  themeToggleEl.textContent = theme === 'light' ? '🌙' : '☀️'
+  localStorage.setItem('wordlus-theme', theme)
+}
+
+function setupThemeToggle() {
+  const currentTheme = getPreferredTheme()
+  setTheme(currentTheme)
+
+  themeToggleEl.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme')
+    setTheme(current === 'light' ? 'dark' : 'light')
+  })
+}
 
 function updateNavTabs(dialect, wordLength) {
   document.querySelectorAll('.toggle-btn[data-length]').forEach(btn => {
@@ -155,6 +178,7 @@ function handleNewGame() {
 }
 
 async function init() {
+  setupThemeToggle()
   setupPhysicalKeyboard(handleKey)
   setupNavTabs()
 
