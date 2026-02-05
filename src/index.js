@@ -11,20 +11,24 @@ import {
   removeLetter,
   submitGuess,
   getCurrentRow,
-  isGuessComplete
+  isGuessComplete,
+  isTodaysGame
 } from './game/state.js'
 import { evaluateGuess, isLetter } from './game/rules.js'
-import { loadWords, isValidWord, getRandomAnswer } from './game/words.js'
+import { loadWords, isValidWord, getDailyAnswer, getRandomAnswer, getWordInfo } from './game/words.js'
 import { createGrid, renderState, updateCurrentRow, revealRow, shakeRow } from './ui/grid.js'
 import { createKeyboard, setupPhysicalKeyboard, updateKeyboardColors } from './ui/keyboard.js'
 import { showEndModal } from './ui/modal.js'
 import { showToast } from './ui/toast.js'
+import { showHelpModal } from './ui/help.js'
 
 let state = null
 
 const gridEl = document.getElementById('grid')
 const keyboardEl = document.getElementById('keyboard')
 const themeToggleEl = document.getElementById('theme-toggle')
+const helpBtnEl = document.getElementById('help-btn')
+const DEBUG_MODE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
 
 function getPreferredTheme() {
   const saved = localStorage.getItem('wordlus-theme')
@@ -45,6 +49,12 @@ function setupThemeToggle() {
   themeToggleEl.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme')
     setTheme(current === 'light' ? 'dark' : 'light')
+  })
+}
+
+function setupHelpButton() {
+  helpBtnEl.addEventListener('click', () => {
+    showHelpModal()
   })
 }
 
@@ -80,43 +90,57 @@ function setupNavTabs() {
 }
 
 async function switchGame({ dialect, wordLength }) {
-  clearState()
-  await startGame({ dialect, wordLength })
+  setPreferredDialect(dialect)
+  setPreferredWordLength(wordLength)
+
+  const savedState = loadState(wordLength, dialect)
+
+  if (savedState && isTodaysGame(savedState)) {
+    await restoreGame(savedState)
+  } else {
+    await startGame({ dialect, wordLength })
+  }
 }
 
-async function startGame({ dialect, wordLength }) {
+async function startGame({ dialect, wordLength, forceNew = false }) {
   setPreferredDialect(dialect)
   setPreferredWordLength(wordLength)
   await loadWords({ dialect, wordLength })
 
-  const answer = getRandomAnswer()
+  const answer = DEBUG_MODE ? getRandomAnswer() : getDailyAnswer(wordLength, dialect)
   state = createInitialState(wordLength, answer, dialect)
 
   createGrid(gridEl, wordLength)
   createKeyboard(keyboardEl, handleKey)
   updateNavTabs(dialect, wordLength)
 
-  saveState(state)
+  if (!DEBUG_MODE || !forceNew) {
+    saveState(state)
+  }
 }
 
 async function restoreGame(savedState) {
   const dialect = savedState.dialect || 'any'
-  await loadWords({ dialect, wordLength: savedState.wordLength })
+  const wordLength = savedState.wordLength
+  await loadWords({ dialect, wordLength })
+
+  const answer = getDailyAnswer(wordLength, dialect)
 
   state = {
     ...savedState,
     dialect,
+    answer,
     currentGuess: ''
   }
 
-  createGrid(gridEl, state.wordLength)
+  createGrid(gridEl, wordLength)
   createKeyboard(keyboardEl, handleKey)
   renderState(gridEl, state)
   updateKeyboardColors(keyboardEl, state.usedLetters)
-  updateNavTabs(dialect, state.wordLength)
+  updateNavTabs(dialect, wordLength)
 
   if (state.status !== 'playing') {
-    setTimeout(() => showEndModal(state, handleNewGame), 500)
+    setTimeout(() => showEndModal(state, getWordInfo(state.answer), null), 500)
   }
 }
 
@@ -162,10 +186,10 @@ function handleSubmit() {
 
     if (state.status === 'won') {
       showToast('Zoo heev!', 2000)
-      setTimeout(() => showEndModal(state, handleNewGame), 1000)
+      setTimeout(() => showEndModal(state, getWordInfo(state.answer), DEBUG_MODE ? handleNewGame : null), 1000)
     } else if (state.status === 'lost') {
       showToast(state.answer.toUpperCase(), 3000)
-      setTimeout(() => showEndModal(state, handleNewGame), 1500)
+      setTimeout(() => showEndModal(state, getWordInfo(state.answer), DEBUG_MODE ? handleNewGame : null), 1500)
     }
   }, revealDelay)
 }
@@ -173,22 +197,23 @@ function handleSubmit() {
 function handleNewGame() {
   const dialect = state?.dialect || getPreferredDialect()
   const wordLength = state?.wordLength || getPreferredWordLength() || 4
-  clearState()
-  startGame({ dialect, wordLength })
+  clearState(wordLength, dialect)
+  startGame({ dialect, wordLength, forceNew: true })
 }
 
 async function init() {
   setupThemeToggle()
+  setupHelpButton()
   setupPhysicalKeyboard(handleKey)
   setupNavTabs()
 
-  const savedState = loadState()
+  const preferredLength = getPreferredWordLength() || 4
+  const preferredDialect = getPreferredDialect()
+  const savedState = loadState(preferredLength, preferredDialect)
 
-  if (savedState && savedState.answer) {
+  if (savedState && isTodaysGame(savedState)) {
     await restoreGame(savedState)
   } else {
-    const preferredLength = getPreferredWordLength() || 4
-    const preferredDialect = getPreferredDialect()
     await startGame({ dialect: preferredDialect, wordLength: preferredLength })
   }
 }

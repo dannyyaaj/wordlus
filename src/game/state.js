@@ -1,5 +1,14 @@
-const STORAGE_KEY = 'wordlus-state'
+const STORAGE_KEY_PREFIX = 'wordlus-state'
 const MAX_GUESSES = 6
+
+function getStorageKey(wordLength, dialect) {
+  return `${STORAGE_KEY_PREFIX}-${wordLength}-${dialect}`
+}
+
+function getTodayString() {
+  const today = new Date()
+  return `${today.getUTCFullYear()}-${String(today.getUTCMonth() + 1).padStart(2, '0')}-${String(today.getUTCDate()).padStart(2, '0')}`
+}
 
 export function createInitialState(wordLength, answer, dialect = 'any') {
   return {
@@ -10,13 +19,15 @@ export function createInitialState(wordLength, answer, dialect = 'any') {
     evaluations: [],
     currentGuess: '',
     status: 'playing',
-    usedLetters: {}
+    usedLetters: {},
+    gameDate: getTodayString()
   }
 }
 
-export function loadState() {
+export function loadState(wordLength, dialect) {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY)
+    const key = getStorageKey(wordLength, dialect)
+    const saved = localStorage.getItem(key)
     if (saved) {
       return JSON.parse(saved)
     }
@@ -28,23 +39,44 @@ export function loadState() {
 
 export function saveState(state) {
   try {
+    const key = getStorageKey(state.wordLength, state.dialect)
     const toSave = {
       wordLength: state.wordLength,
       dialect: state.dialect,
-      answer: state.answer,
       guesses: state.guesses,
       evaluations: state.evaluations,
       status: state.status,
-      usedLetters: state.usedLetters
+      usedLetters: state.usedLetters,
+      gameDate: state.gameDate
     }
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave))
+    localStorage.setItem(key, JSON.stringify(toSave))
   } catch (e) {
     console.error('Failed to save state:', e)
   }
 }
 
-export function clearState() {
-  localStorage.removeItem(STORAGE_KEY)
+export function clearState(wordLength, dialect) {
+  const key = getStorageKey(wordLength, dialect)
+  localStorage.removeItem(key)
+}
+
+export function isTodaysGame(savedState) {
+  if (!savedState || !savedState.gameDate) return false
+  return savedState.gameDate === getTodayString()
+}
+
+export function getTimeUntilNextWord() {
+  const now = new Date()
+  const tomorrow = new Date(Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate() + 1,
+    0, 0, 0, 0
+  ))
+  const diff = tomorrow - now
+  const hours = Math.floor(diff / (1000 * 60 * 60))
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+  return { hours, minutes }
 }
 
 export function getPreferredWordLength() {

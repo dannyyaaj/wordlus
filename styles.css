@@ -1,6 +1,6 @@
 :root {
   --color-correct: #4b3f72;
-  --color-present: #b6b1a9;
+  --color-present: #f0c75e;
   --color-absent: #2f2f33;
   --color-accent: #6f5fa0;
   --color-border: #3a3a3a;
@@ -17,15 +17,13 @@
 [data-theme="light"] {
   --color-bg: #ffffff;
   --color-text: #1a1a1b;
-
-  --color-correct: #6a5fa3;
-  --color-border: #d3d6da;
-  --color-absent: #8a8d91;
-
-  --color-key-bg: #d3d6da;
+  --color-correct: #6b4fa3;
+  --color-present: #2f9c8f;
+  --color-absent: #6e7177;
+  --color-border: #cfd2d8;
+  --color-key-bg: #d9dbe1;
   --color-key-text: #1a1a1b;
-
-  --color-toggle-bg: #e5e5e5;
+  --color-toggle-bg: #ececf0;
   --color-toggle-text: #555;
   --color-toggle-active-bg: #1a1a1b;
   --color-toggle-active-text: #ffffff;
@@ -154,12 +152,12 @@ body {
 .grid {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
 }
 
 .grid-row {
   display: flex;
-  gap: 6px;
+  gap: 10px;
 }
 
 .grid-cell {
@@ -174,19 +172,27 @@ body {
   text-transform: uppercase;
 }
 
+.grid-cell[data-state="correct"],
+.grid-cell[data-state="present"],
+.grid-cell[data-state="absent"] {
+  color: #ffffff;
+  font-weight: 600;
+}
+
 .grid-cell[data-state="correct"] {
   background: var(--color-correct);
   border-color: var(--color-correct);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
 }
 
 .grid-cell[data-state="present"] {
   background: var(--color-present);
-  border-color: var(--color-present);
+  border: 2px solid rgba(0, 0, 0, 0.15);
 }
 
 .grid-cell[data-state="absent"] {
   background: var(--color-absent);
-  border-color: var(--color-absent);
+  border: 2px solid rgba(0, 0, 0, 0.25);
 }
 
 .grid-row.shake {
@@ -255,33 +261,47 @@ body {
   font-weight: 600;
 }
 
-.theme-toggle {
+.header-actions {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: var(--color-toggle-bg);
-  border: none;
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.15s;
+  display: flex;
+  gap: 8px;
 }
 
-.theme-toggle:hover {
+.icon-btn {
+  background: var(--color-toggle-bg);
+  color: var(--color-text);
+  border: none;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
   opacity: 0.8;
 }
 
 .key[data-state="correct"] {
   background: var(--color-correct);
+  color: #fff;
 }
 
 .key[data-state="present"] {
   background: var(--color-present);
+  color: #fff;
 }
 
 .key[data-state="absent"] {
   background: var(--color-absent);
+  color: #fff;
 }
 
 .modal-overlay {
@@ -296,7 +316,8 @@ body {
 }
 
 .modal {
-  background: #1a1a1b;
+  background: var(--color-bg);
+  color: var(--color-text);
   border-radius: 8px;
   padding: 32px;
   max-width: 400px;
@@ -307,10 +328,11 @@ body {
 .modal h2 {
   font-size: 28px;
   margin-bottom: 8px;
+  color: var(--color-text);
 }
 
 .modal p {
-  color: #818384;
+  color: var(--color-toggle-text);
   margin-bottom: 16px;
 }
 
@@ -318,6 +340,26 @@ body {
   font-size: 18px;
   color: var(--color-text) !important;
   margin-top: 24px;
+}
+
+.modal-countdown {
+  font-size: 14px;
+  color: var(--color-accent);
+  margin-top: 8px;
+}
+
+.result-word {
+  margin-top: 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-correct);
+}
+
+.result-definition {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: var(--color-toggle-text);
 }
 
 .modal-buttons {
@@ -342,8 +384,60 @@ body {
   opacity: 0.9;
 }
 
-.modal-btn.primary {
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legend-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.legend-swatch.correct {
   background: var(--color-correct);
+}
+
+.legend-swatch.present {
+  background: var(--color-present);
+}
+
+.legend-swatch.absent {
+  background: var(--color-absent);
+}
+
+.legend-text {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.legend-text strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 2px;
+  color: var(--color-text);
+}
+
+.modal-btn.primary {
+  background: var(--color-accent);
+  color: #ffffff;
 }
 
 .toast-container {
