@@ -17,7 +17,7 @@ A daily word game for the Hmong language.
 ## Features
 
 - 4-letter and 5-letter word modes
-- Green (Mong Leeg) and White (Hmong Dawb) dialect support
+- Green (Moob Leeg) and White (Hmob Dawb) dialect support
 - Game state persists across sessions
 - On screen keyboard with color feedback
 - Physical keyboard support
@@ -40,21 +40,23 @@ src/
 ├── game/
 │   ├── rules.js      # Pure evaluation logic
 │   ├── state.js      # State management + persistence
-│   └── words.js      # Word loading + validation
+│   └── words.js      # Word loading, validation + definitions
 ├── ui/
 │   ├── grid.js       # Game grid rendering
+│   ├── howToPlay.js  # How to play modal with color legend
 │   ├── keyboard.js   # On-screen keyboard
-│   ├── modal.js      # Mode selection + end game modals
+│   ├── modal.js      # End game modal with word definitions
 │   └── toast.js      # Toast notifications
 ├── data/
-│   ├── green/        # Green (Mong Leng) dialect
+│   ├── banlist.json  # Excluded words (profanity filter)
+│   ├── green/        # Green (Moob Leeg) dialect
 │   │   ├── 4-letter/
 │   │   │   ├── answers.json
 │   │   │   └── guesses.json
 │   │   └── 5-letter/
 │   │       ├── answers.json
 │   │       └── guesses.json
-│   └── white/        # White (Hmong Daw) dialect
+│   └── white/        # White (Hmoob Dawb) dialect
 │       ├── 4-letter/
 │       │   ├── answers.json
 │       │   └── guesses.json
