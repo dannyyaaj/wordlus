@@ -17,7 +17,7 @@ A daily word game for the Hmong language.
 ## Features
 
 - 4-letter and 5-letter word modes
-- White Hmong (Hmoob Dawb) dialect
+- Dialect-inclusive Hmong word pool
 - Game state persists across sessions
 - On screen keyboard with color feedback
 - Physical keyboard support
@@ -48,11 +48,10 @@ src/
 │   ├── modal.js      # End game modal with word definitions
 │   └── toast.js      # Toast notifications
 ├── data/
-│   └── white/        # White Hmong (Hmoob Dawb)
-│       ├── 4-letter/
-│       │   └── words.json
-│       └── 5-letter/
-│           └── words.json
+│   ├── 4-letter/
+│   │   └── words.json
+│   └── 5-letter/
+│       └── words.json
 └── index.js          # Main entry point
 ```
 
@@ -71,10 +70,12 @@ This repository is intentionally kept simple, readable, and framework light so t
 Hmong, like all living languages, has dialects, variations, and evolving usage.
 The word lists used in Wordlus are **curated for playability**, not authority.
 
-No single list is considered definitive.
+Wordlus uses a single, dialect-inclusive word pool. No strict Green/White separation.
+Many families are mixed, speakers switch naturally, and community usage doesn't follow academic lines.
+
 Words are chosen because they are:
 
-- commonly recognized
+- commonly recognized across dialects
 - appropriate for a guessing game
 - reasonably learnable by players
 
@@ -117,8 +118,8 @@ node scripts/generate-sheets-csv.js
 
 This creates 2 CSV files in `csv-export/`:
 
-- `white_4_words.csv`
-- `white_5_words.csv`
+- `4_letter_words.csv`
+- `5_letter_words.csv`
 
 ### Schema
 

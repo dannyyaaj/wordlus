@@ -11,34 +11,27 @@ function normalizeWordEntry(entry) {
   }
 }
 
-export async function loadWords({ dialect = 'white', wordLength }) {
-  // Only white dialect available for now
-  const dialects = [dialect === 'white' ? 'white' : 'white']
+export async function loadWords({ wordLength }) {
+  const res = await fetch(`./src/data/${wordLength}-letter/words.json`)
+  if (!res.ok) {
+    console.error(`Failed to load word list for ${wordLength}-letter`)
+    return { answers: [], validWords: new Set() }
+  }
 
+  const data = await res.json()
   const answerSets = []
   const allWords = []
 
-  await Promise.all(
-    dialects.map(async (d) => {
-      const res = await fetch(`./src/data/${d}/${wordLength}-letter/words.json`)
-      if (!res.ok) {
-        console.error(`Failed to load word list for ${d}/${wordLength}-letter`)
-        return
-      }
-      const data = await res.json()
-
-      data.words.forEach(entry => {
-        const info = normalizeWordEntry(entry)
-        allWords.push(info.word)
-        if (info.isAnswer) {
-          answerSets.push(info.word)
-        }
-        if (info.definition) {
-          wordInfoMap.set(info.word, info)
-        }
-      })
-    })
-  )
+  data.words.forEach(entry => {
+    const info = normalizeWordEntry(entry)
+    allWords.push(info.word)
+    if (info.isAnswer) {
+      answerSets.push(info.word)
+    }
+    if (info.definition) {
+      wordInfoMap.set(info.word, info)
+    }
+  })
 
   answers = [...new Set(answerSets)]
   validWords = new Set(allWords)
@@ -55,7 +48,7 @@ export function getRandomAnswer() {
   return answers[index]
 }
 
-export function getDailyAnswer(wordLength, dialect) {
+export function getDailyAnswer(wordLength) {
   const today = new Date()
   const dateSeed = today.getUTCFullYear() * 10000 + (today.getUTCMonth() + 1) * 100 + today.getUTCDate()
   const modeOffset = wordLength === 5 ? 1000 : 0

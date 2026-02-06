@@ -7,25 +7,22 @@ function track(eventName, params = {}) {
   }
 }
 
-export function trackGameStarted(dialect, wordLength) {
+export function trackGameStarted(wordLength) {
   track('game_started', {
-    dialect,
     word_length: wordLength
   })
 }
 
-export function trackGameCompleted(won, guessCount, dialect, wordLength) {
+export function trackGameCompleted(won, guessCount, wordLength) {
   track('game_completed', {
     result: won ? 'win' : 'loss',
     guesses: guessCount,
-    dialect,
     word_length: wordLength
   })
 }
 
-export function trackModeSelected(dialect, wordLength) {
+export function trackModeSelected(wordLength) {
   track('mode_selected', {
-    dialect,
     word_length: wordLength
   })
 }

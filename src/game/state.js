@@ -1,8 +1,8 @@
 const STORAGE_KEY_PREFIX = 'wordlus-state'
 const MAX_GUESSES = 6
 
-function getStorageKey(wordLength, dialect) {
-  return `${STORAGE_KEY_PREFIX}-${wordLength}-${dialect}`
+function getStorageKey(wordLength) {
+  return `${STORAGE_KEY_PREFIX}-${wordLength}`
 }
 
 function getTodayString() {
@@ -10,10 +10,9 @@ function getTodayString() {
   return `${today.getUTCFullYear()}-${String(today.getUTCMonth() + 1).padStart(2, '0')}-${String(today.getUTCDate()).padStart(2, '0')}`
 }
 
-export function createInitialState(wordLength, answer, dialect = 'white') {
+export function createInitialState(wordLength, answer) {
   return {
     wordLength,
-    dialect,
     answer,
     guesses: [],
     evaluations: [],
@@ -24,9 +23,9 @@ export function createInitialState(wordLength, answer, dialect = 'white') {
   }
 }
 
-export function loadState(wordLength, dialect) {
+export function loadState(wordLength) {
   try {
-    const key = getStorageKey(wordLength, dialect)
+    const key = getStorageKey(wordLength)
     const saved = localStorage.getItem(key)
     if (saved) {
       return JSON.parse(saved)
@@ -39,10 +38,9 @@ export function loadState(wordLength, dialect) {
 
 export function saveState(state) {
   try {
-    const key = getStorageKey(state.wordLength, state.dialect)
+    const key = getStorageKey(state.wordLength)
     const toSave = {
       wordLength: state.wordLength,
-      dialect: state.dialect,
       guesses: state.guesses,
       evaluations: state.evaluations,
       status: state.status,
@@ -55,8 +53,8 @@ export function saveState(state) {
   }
 }
 
-export function clearState(wordLength, dialect) {
-  const key = getStorageKey(wordLength, dialect)
+export function clearState(wordLength) {
+  const key = getStorageKey(wordLength)
   localStorage.removeItem(key)
 }
 
@@ -89,18 +87,6 @@ export function getPreferredWordLength() {
 
 export function setPreferredWordLength(length) {
   localStorage.setItem('wordlus-wordLength', length.toString())
-}
-
-export function getPreferredDialect() {
-  try {
-    return localStorage.getItem('wordlus-dialect') || 'white'
-  } catch {
-    return 'white'
-  }
-}
-
-export function setPreferredDialect(dialect) {
-  localStorage.setItem('wordlus-dialect', dialect)
 }
 
 export function addLetter(state, letter) {

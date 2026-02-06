@@ -14,7 +14,6 @@ const path = require('path')
 const DATA_DIR = path.join(__dirname, '..', 'src', 'data')
 const OUTPUT_DIR = path.join(__dirname, '..', 'csv-export')
 
-const DIALECTS = ['white']
 const WORD_LENGTHS = [4, 5]
 
 // ============================================
@@ -41,10 +40,10 @@ function escapeCSV(value) {
   return str
 }
 
-function generateCSV(dialect, wordLength) {
-  const wordsPath = path.join(DATA_DIR, dialect, `${wordLength}-letter`, 'words.json')
+function generateCSV(wordLength) {
+  const wordsPath = path.join(DATA_DIR, `${wordLength}-letter`, 'words.json')
 
-  console.log(`Processing ${dialect} ${wordLength}-letter words...`)
+  console.log(`Processing ${wordLength}-letter words...`)
 
   const wordsData = readJsonFile(wordsPath)
 
@@ -67,7 +66,7 @@ function generateCSV(dialect, wordLength) {
   const csvContent = [header, ...rows].join('\n')
 
   // Write to file
-  const outputFileName = `${dialect}_${wordLength}_words.csv`
+  const outputFileName = `${wordLength}_letter_words.csv`
   const outputPath = path.join(OUTPUT_DIR, outputFileName)
   fs.writeFileSync(outputPath, csvContent, 'utf8')
 
@@ -97,11 +96,9 @@ function main() {
 
   const results = []
 
-  for (const dialect of DIALECTS) {
-    for (const wordLength of WORD_LENGTHS) {
-      const result = generateCSV(dialect, wordLength)
-      results.push(result)
-    }
+  for (const wordLength of WORD_LENGTHS) {
+    const result = generateCSV(wordLength)
+    results.push(result)
   }
 
   console.log('\n--- Summary ---')
