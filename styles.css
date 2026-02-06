@@ -168,12 +168,14 @@ body {
 
 .grid-row {
   display: flex;
+  justify-content: center;
   gap: 6px;
 }
 
 .grid-cell {
   flex: 1;
   aspect-ratio: 1 / 1;
+  max-width: 62px;
   border: 2px solid var(--color-border);
   display: flex;
   align-items: center;
