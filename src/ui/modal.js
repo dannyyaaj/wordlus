@@ -24,7 +24,7 @@ export function showEndModal(state, wordInfo, onNewGame) {
   const modal = document.createElement('div')
   modal.className = 'modal'
   modal.innerHTML = `
-    ${isWin ? `<h2>You Got It!</h2><p class="result-subtitle">Solved in ${state.guesses.length} ${guessLabel}</p>` : '<p class="todays-word-label">Today\'s word</p>'}
+    ${isWin ? `<p class="result-subtitle">Solved in ${state.guesses.length} ${guessLabel}</p>` : '<p class="todays-word-label">Today\'s word</p>'}
     <div class="result-word ${isWin ? 'result-word--win' : ''}">${state.answer.toUpperCase()}</div>
     ${definitionHtml}
     ${nextWordHtml}

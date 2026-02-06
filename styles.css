@@ -421,7 +421,7 @@ body {
 
 .result-subtitle {
   color: var(--color-toggle-text);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .result-definition {
