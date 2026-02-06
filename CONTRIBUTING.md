@@ -1,40 +1,67 @@
-# Contributing
+# Contributing to Wordlus
 
-Thank you for your interest in contributing to Wordlus. Contributions are welcome.
+Thank you for your interest in contributing to Wordlus!
+This project is community-driven and focused on celebrating, learning, and
+preserving the Hmong language.
 
-## What's Welcome
+## Word Submissions
 
-- Bug fixes and small improvements
-- Accessibility and usability enhancements
-- Performance or readability improvements
-- Suggestions for new features (via issues or discussion)
-- Word list suggestions with context or sources
+Word list updates are welcome and encouraged.
 
-## Word List Contributions
+### Guidelines
 
-Because Wordlus is a language focused game:
+Please ensure that submitted words are:
 
-- Word suggestions should be commonly recognizable
-- Dialect differences should be noted where applicable
-- No single dialect is treated as "more correct" than another
+- Correctly spelled
+- Appropriate for general audiences
+- Valid Hmong words (Green and White dialects combined)
+- Exactly 4 or 5 letters long
+- Not proper nouns (names, places, brands)
+- Not offensive or derogatory
 
-Final decisions on word inclusion are made to preserve:
+If you are unsure about a word, feel free to include a note or source.
 
-- fairness
-- playability
-- learning value
+---
 
-## What to Expect
+### Dialect Policy
 
-- Not all suggestions will be accepted
-- Feedback will be handled respectfully
-- Discussions should remain constructive and inclusive
+At this time, Wordlus uses a **combined Hmong word list** that includes both
+Green and White dialect spellings.
 
-## What's Out of Scope
+There is no dialect separation in gameplay. If a word exists in multiple
+dialects with different spellings, all valid spellings may be included.
 
-- Major architectural rewrites without discussion
-- Changes that increase complexity without clear benefit
-- Arguments about linguistic authority or "correctness"
+Dialect-specific filtering or modes may be explored in the future.
 
-Wordlus exists to celebrate the Hmong language through play.
-Please help keep it welcoming for everyone.
+---
+
+### How to Submit Words
+
+1. Fork the repository
+2. Add or edit words in the appropriate file:
+
+   - `src/data/4-letter/words.json`
+   - `src/data/5-letter/words.json`
+
+3. Each file contains a JSON object with a `words` array.
+   Each word entry must follow this structure:
+
+   ```json
+   {
+     "word": "hmoob",
+     "isAnswer": true,
+     "partOfSpeech": "noun",
+     "definition": "Hmong (people)"
+   }
+   ```
+
+4. Ensure words are:
+   - Exactly 4 or 5 letters
+   - Unique (no duplicates)
+   - Correctly spelled
+5. Keep the list alphabetized
+6. Open a Pull Request with a short explanation of your changes
+
+Example PR description:
+
+> Added 6 valid Hmong words with definitions and removed 2 invalid entries.

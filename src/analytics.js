@@ -19,7 +19,13 @@ export function trackGameCompleted(won, guessCount, wordLength) {
 }
 
 export function trackModeSelected(wordLength) {
-  track('mode_selected', {
-    word_length: wordLength
-  })
+  track(`mode_selected_${wordLength}_letter`)
+}
+
+export function trackOnboardingShown() {
+  track('onboarding_shown')
+}
+
+export function trackHelpOpened() {
+  track('help_opened')
 }

@@ -166,6 +166,14 @@ Wordlus uses anonymous analytics to understand general usage. We do not track in
 
 See [PRIVACY.md](PRIVACY.md) for details.
 
+## Versioning Policy
+
+- **Patch (0.1.x)**: word list updates, spelling corrections, analytics, internal changes
+- **Minor (0.x.0)**: gameplay changes, new modes, UX flows, rule changes
+- **Major (1.0.0)**: stable public release
+
+For word list citations, releases may include build metadata: `0.1.1+words-2026-02-06`
+
 ## License
 
 MIT
