@@ -1,13 +1,15 @@
-const STORAGE_KEY_PREFIX = 'wordlus-state'
+const STORAGE_KEY_PREFIX = 'wordlus-state-v2'
 const MAX_GUESSES = 6
+const RESET_HOUR_UTC = 5
 
 function getStorageKey(wordLength) {
   return `${STORAGE_KEY_PREFIX}-${wordLength}`
 }
 
-function getTodayString() {
-  const today = new Date()
-  return `${today.getUTCFullYear()}-${String(today.getUTCMonth() + 1).padStart(2, '0')}-${String(today.getUTCDate()).padStart(2, '0')}`
+function getGameDate() {
+  const now = new Date()
+  const adjusted = new Date(now.getTime() - RESET_HOUR_UTC * 60 * 60 * 1000)
+  return `${adjusted.getUTCFullYear()}-${String(adjusted.getUTCMonth() + 1).padStart(2, '0')}-${String(adjusted.getUTCDate()).padStart(2, '0')}`
 }
 
 export function createInitialState(wordLength, answer) {
@@ -19,7 +21,7 @@ export function createInitialState(wordLength, answer) {
     currentGuess: '',
     status: 'playing',
     usedLetters: {},
-    gameDate: getTodayString()
+    gameDate: getGameDate()
   }
 }
 
@@ -60,22 +62,30 @@ export function clearState(wordLength) {
 
 export function isTodaysGame(savedState) {
   if (!savedState || !savedState.gameDate) return false
-  return savedState.gameDate === getTodayString()
+  return savedState.gameDate === getGameDate()
 }
 
 export function getTimeUntilNextWord() {
   const now = new Date()
-  const tomorrow = new Date(Date.UTC(
+  let nextReset = new Date(Date.UTC(
     now.getUTCFullYear(),
     now.getUTCMonth(),
-    now.getUTCDate() + 1,
-    0, 0, 0, 0
+    now.getUTCDate(),
+    RESET_HOUR_UTC, 0, 0, 0
   ))
-  const diff = tomorrow - now
+  if (now >= nextReset) {
+    nextReset = new Date(Date.UTC(
+      now.getUTCFullYear(),
+      now.getUTCMonth(),
+      now.getUTCDate() + 1,
+      RESET_HOUR_UTC, 0, 0, 0
+    ))
+  }
+  const diff = nextReset - now
   const hours = Math.floor(diff / (1000 * 60 * 60))
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
 
-  const localTime = tomorrow.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+  const localTime = nextReset.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
 
   return { hours, minutes, localTime }
 }
