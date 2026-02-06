@@ -425,9 +425,16 @@ body {
 }
 
 .result-definition {
-  margin-top: 6px;
+  margin-top: 12px;
   font-size: 0.95rem;
   color: var(--color-toggle-text);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.result-definition .part-of-speech {
+  display: block;
+  margin-bottom: 4px;
 }
 
 .part-of-speech {
