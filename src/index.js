@@ -18,7 +18,7 @@ import { createKeyboard, setupPhysicalKeyboard, updateKeyboardColors } from './u
 import { showEndModal } from './ui/modal.js'
 import { showToast } from './ui/toast.js'
 import { showHowToPlay } from './ui/howToPlay.js'
-import { trackGameStarted, trackGameCompleted, trackModeSelected } from './analytics.js'
+import { trackGameStarted, trackGameCompleted, trackModeSelected, trackOnboardingShown, trackHelpOpened } from './analytics.js'
 
 let state = null
 
@@ -62,6 +62,7 @@ function setupHelpButton() {
     showHowToPlay()
     markOnboarded()
     helpBtnEl.classList.remove('pulse')
+    trackHelpOpened()
   })
 }
 
@@ -202,6 +203,7 @@ async function init() {
     helpBtnEl.classList.add('pulse')
     showHowToPlay()
     markOnboarded()
+    trackOnboardingShown()
   }
 }
 
