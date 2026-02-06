@@ -11,7 +11,7 @@ export function showEndModal(state, wordInfo, onNewGame) {
   const canPlayAgain = typeof onNewGame === 'function'
 
   const definitionHtml = wordInfo.definition
-    ? `<div class="result-definition">${(wordInfo.partOfSpeech) ? `<span class="part-of-speech">${wordInfo.partOfSpeech}</span> · ` : ''}${wordInfo.definition}</div>`
+    ? `<div class="result-definition">${(wordInfo.partOfSpeech) ? `<span class="part-of-speech">${wordInfo.partOfSpeech}</span>` : ''}${wordInfo.definition}</div>`
     : ''
 
   const nextWordHtml = !canPlayAgain
