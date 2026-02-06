@@ -5,27 +5,31 @@ export function showEndModal(state, wordInfo, onNewGame) {
   overlay.className = 'modal-overlay'
 
   const isWin = state.status === 'won'
-  const subtitle = isWin
-    ? `You got it in ${state.guesses.length}!`
-    : 'The word was:'
+  const guessLabel = state.guesses.length === 1 ? 'guess' : 'guesses'
 
-  const { hours, minutes } = getTimeUntilNextWord()
+  const { localTime } = getTimeUntilNextWord()
   const canPlayAgain = typeof onNewGame === 'function'
 
   const definitionHtml = wordInfo.definition
-    ? `<div class="result-definition">${wordInfo.partOfSpeech ? `${wordInfo.partOfSpeech} — ` : ''}${wordInfo.definition}</div>`
+    ? `<div class="result-definition">${(wordInfo.partOfSpeech) ? `<span class="part-of-speech">${wordInfo.partOfSpeech}</span> · ` : ''}${wordInfo.definition}</div>`
+    : ''
+
+  const nextWordHtml = !canPlayAgain
+    ? `<div class="modal-next-word">
+        <p class="next-word-local">Next word at ${localTime} (local)</p>
+        <p class="next-word-utc">Resets globally at 12:00 AM UTC</p>
+      </div>`
     : ''
 
   const modal = document.createElement('div')
   modal.className = 'modal'
   modal.innerHTML = `
-    <h2>${isWin ? 'Zoo heev!' : 'Game Over'}</h2>
-    <p>${subtitle}</p>
-    <div class="result-word">${state.answer.toUpperCase()}</div>
+    ${isWin ? `<h2>You Got It!</h2><p class="result-subtitle">Solved in ${state.guesses.length} ${guessLabel}</p>` : '<p class="todays-word-label">Today\'s word</p>'}
+    <div class="result-word ${isWin ? 'result-word--win' : ''}">${state.answer.toUpperCase()}</div>
     ${definitionHtml}
-    ${!canPlayAgain ? `<p class="modal-countdown">Next word in ${hours}h ${minutes}m</p>` : ''}
+    ${nextWordHtml}
     <div class="modal-buttons">
-      <button class="modal-btn primary" data-action="close">${canPlayAgain ? 'Play Again' : 'Close'}</button>
+      <button class="modal-btn primary" data-action="close">${canPlayAgain ? 'Play Again' : 'Done'}</button>
     </div>
   `
 

@@ -4,13 +4,13 @@
       "word": "chaws",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "place; land"
+      "definition": "place, land"
     },
     {
       "word": "cheem",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to block; obstruct"
+      "definition": "to block, obstruct"
     },
     {
       "word": "dheev",
@@ -24,7 +24,7 @@
       "word": "hlais",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to slice; cut"
+      "definition": "to slice, cut"
     },
     {
       "word": "hlaws",
@@ -40,7 +40,7 @@
       "word": "hloov",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to change; replace"
+      "definition": "to change, replace"
     },
     {
       "word": "hluas",
@@ -52,7 +52,7 @@
       "word": "hluav",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "electricity; fire"
+      "definition": "electricity, fire"
     },
     {
       "word": "hmoob",
@@ -64,7 +64,7 @@
       "word": "hmoov",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "luck; fortune; flour"
+      "definition": "luck, fortune, flour"
     },
     {
       "word": "hneev",
@@ -76,7 +76,7 @@
       "word": "hniav",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "tooth; teeth"
+      "definition": "tooth, teeth"
     },
     {
       "word": "hnyav",
@@ -114,7 +114,7 @@
       "word": "khaws",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to pick up; keep"
+      "definition": "to pick up, keep"
     },
     {
       "word": "khawv",
@@ -138,7 +138,7 @@
       "word": "khoom",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "thing; item; stuff"
+      "definition": "thing, item, stuff"
     },
     {
       "word": "khoov",
@@ -154,7 +154,7 @@
       "word": "ncaim",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to leave; depart"
+      "definition": "to leave, depart"
     },
     {
       "word": "ncauj",
@@ -192,7 +192,7 @@
       "word": "nkauj",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "song; girl; daughter"
+      "definition": "song, girl, daughter"
     },
     {
       "word": "nkaum",
@@ -208,7 +208,7 @@
       "word": "nkawd",
       "isAnswer": true,
       "partOfSpeech": "pron",
-      "definition": "they two; those two"
+      "definition": "they two, those two"
     },
     {
       "word": "nkawm",
@@ -252,7 +252,7 @@
       "word": "nphoo",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to spray; to sprinkle"
+      "definition": "to spray, to sprinkle"
     },
     {
       "word": "npias",
@@ -280,7 +280,7 @@
       "word": "nplua",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to fine; punish"
+      "definition": "to fine, punish"
     },
     {
       "word": "npuab",
@@ -298,7 +298,7 @@
       "word": "nqaij",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "meat; flesh"
+      "definition": "meat, flesh"
     },
     {
       "word": "nqaim",
@@ -324,7 +324,7 @@
       "word": "nquag",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "diligent; hardworking"
+      "definition": "diligent, hardworking"
     },
     {
       "word": "nraud",
@@ -344,7 +344,7 @@
       "word": "nrawm",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "fast; quick"
+      "definition": "fast, quick"
     },
     {
       "word": "nriaj",
@@ -360,7 +360,7 @@
       "word": "nruab",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "middle; between"
+      "definition": "middle, between"
     },
     {
       "word": "nruas",
@@ -376,13 +376,13 @@
       "word": "ntaiv",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "stairs; ladder"
+      "definition": "stairs, ladder"
     },
     {
       "word": "ntaub",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "cloth; fabric"
+      "definition": "cloth, fabric"
     },
     {
       "word": "ntaug",
@@ -392,7 +392,7 @@
       "word": "ntaus",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to hit; strike"
+      "definition": "to hit, strike"
     },
     {
       "word": "ntawd",
@@ -404,7 +404,7 @@
       "word": "ntawm",
       "isAnswer": true,
       "partOfSpeech": "prep",
-      "definition": "at; of"
+      "definition": "at, of"
     },
     {
       "word": "ntaws",
@@ -414,7 +414,7 @@
       "word": "ntawv",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "paper; letter; book"
+      "definition": "paper, letter, book"
     },
     {
       "word": "nthab",
@@ -436,7 +436,7 @@
       "word": "ntiaj",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "world; earth"
+      "definition": "world, earth"
     },
     {
       "word": "ntiav",
@@ -480,7 +480,7 @@
       "word": "ntsia",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to look; stare"
+      "definition": "to look, stare"
     },
     {
       "word": "ntsib",
@@ -504,13 +504,13 @@
       "word": "ntsug",
       "isAnswer": true,
       "partOfSpeech": "adv",
-      "definition": "standing; upright"
+      "definition": "standing, upright"
     },
     {
       "word": "ntsuj",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "spirit; soul"
+      "definition": "spirit, soul"
     },
     {
       "word": "ntswg",
@@ -556,13 +556,13 @@
       "word": "ntxim",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "suitable; worthy"
+      "definition": "suitable, worthy"
     },
     {
       "word": "ntxiv",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to add; more"
+      "definition": "to add, more"
     },
     {
       "word": "ntxoo",
@@ -608,13 +608,13 @@
       "word": "nyiaj",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "money; silver"
+      "definition": "money, silver"
     },
     {
       "word": "nyiam",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to like; to love"
+      "definition": "to like, to love"
     },
     {
       "word": "nyias",
@@ -630,13 +630,13 @@
       "word": "nyuab",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "difficult; hard"
+      "definition": "difficult, hard"
     },
     {
       "word": "nyuaj",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "difficult; hard"
+      "definition": "difficult, hard"
     },
     {
       "word": "phais",
@@ -692,7 +692,7 @@
       "word": "plaub",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "hair; feather; four"
+      "definition": "hair, feather, four"
     },
     {
       "word": "plaus",
@@ -758,7 +758,7 @@
       "word": "qhuab",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to advise; counsel"
+      "definition": "to advise, counsel"
     },
     {
       "word": "qhuas",
@@ -784,13 +784,13 @@
       "word": "thaiv",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to block; protect"
+      "definition": "to block, protect"
     },
     {
       "word": "thaum",
       "isAnswer": true,
       "partOfSpeech": "conj",
-      "definition": "when; while"
+      "definition": "when, while"
     },
     {
       "word": "thawb",
@@ -802,7 +802,7 @@
       "word": "thawj",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "first; main"
+      "definition": "first, main"
     },
     {
       "word": "thawv",
@@ -816,7 +816,7 @@
       "word": "theem",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "level; floor"
+      "definition": "level, floor"
     },
     {
       "word": "thiab",
@@ -828,13 +828,13 @@
       "word": "thiaj",
       "isAnswer": true,
       "partOfSpeech": "conj",
-      "definition": "so; then"
+      "definition": "so, then"
     },
     {
       "word": "thoob",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "bucket; pail"
+      "definition": "bucket, pail"
     },
     {
       "word": "thuaj",
@@ -864,7 +864,7 @@
       "word": "tsawg",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "few; little"
+      "definition": "few, little"
     },
     {
       "word": "tsawm",
@@ -882,37 +882,37 @@
       "word": "tseeb",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "true; real"
+      "definition": "true, real"
     },
     {
       "word": "tseem",
       "isAnswer": true,
       "partOfSpeech": "adv",
-      "definition": "still; yet"
+      "definition": "still, yet"
     },
     {
       "word": "tshab",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "new; fresh"
+      "definition": "new, fresh"
     },
     {
       "word": "tshaj",
       "isAnswer": true,
       "partOfSpeech": "adv",
-      "definition": "more than; to announce"
+      "definition": "more than, to announce"
     },
     {
       "word": "tshav",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "sunshine; yard"
+      "definition": "sunshine, yard"
     },
     {
       "word": "tsheb",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "car; vehicle"
+      "definition": "car, vehicle"
     },
     {
       "word": "tshee",
@@ -960,7 +960,7 @@
       "word": "tshua",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to care; miss"
+      "definition": "to care, miss"
     },
     {
       "word": "tshwm",
@@ -1002,31 +1002,31 @@
       "word": "txais",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to receive; accept"
+      "definition": "to receive, accept"
     },
     {
       "word": "txaus",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "enough; satisfied"
+      "definition": "enough, satisfied"
     },
     {
       "word": "txawj",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to know how; skilled"
+      "definition": "to know how, skilled"
     },
     {
       "word": "txawm",
       "isAnswer": true,
       "partOfSpeech": "conj",
-      "definition": "even; although"
+      "definition": "even, although"
     },
     {
       "word": "txawv",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "different; strange"
+      "definition": "different, strange"
     },
     {
       "word": "txeeb",
@@ -1040,7 +1040,7 @@
       "word": "txhab",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "bank; granary"
+      "definition": "bank, granary"
     },
     {
       "word": "txhaj",
@@ -1062,7 +1062,7 @@
       "word": "txhim",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to build; improve"
+      "definition": "to build, improve"
     },
     {
       "word": "txhob",
@@ -1074,7 +1074,7 @@
       "word": "txhua",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "every; all"
+      "definition": "every, all"
     },
     {
       "word": "txhuv",
@@ -1096,7 +1096,7 @@
       "word": "txiaj",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "value; worth"
+      "definition": "value, worth"
     },
     {
       "word": "txias",
@@ -1118,13 +1118,13 @@
       "word": "txoos",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "gathering; meeting"
+      "definition": "gathering, meeting"
     },
     {
       "word": "txuag",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to save; conserve"
+      "definition": "to save, conserve"
     },
     {
       "word": "txuam",
@@ -1134,7 +1134,7 @@
       "word": "txuas",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to connect; continue"
+      "definition": "to connect, continue"
     },
     {
       "word": "xyaum",
@@ -1156,7 +1156,7 @@
       "word": "xyuas",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to check; examine"
+      "definition": "to check, examine"
     }
   ]
 }

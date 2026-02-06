@@ -2,7 +2,6 @@ import {
   createInitialState,
   loadState,
   saveState,
-  clearState,
   getPreferredWordLength,
   setPreferredWordLength,
   addLetter,
@@ -13,7 +12,7 @@ import {
   isTodaysGame
 } from './game/state.js'
 import { evaluateGuess, isLetter } from './game/rules.js'
-import { loadWords, isValidWord, getDailyAnswer, getRandomAnswer, getWordInfo } from './game/words.js'
+import { loadWords, isValidWord, getDailyAnswer, getWordInfo } from './game/words.js'
 import { createGrid, renderState, updateCurrentRow, revealRow, shakeRow } from './ui/grid.js'
 import { createKeyboard, setupPhysicalKeyboard, updateKeyboardColors } from './ui/keyboard.js'
 import { showEndModal } from './ui/modal.js'
@@ -27,7 +26,6 @@ const gridEl = document.getElementById('grid')
 const keyboardEl = document.getElementById('keyboard')
 const themeToggleEl = document.getElementById('theme-toggle')
 const helpBtnEl = document.getElementById('help-btn')
-const DEBUG_MODE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
 
 function getPreferredTheme() {
   const saved = localStorage.getItem('wordlus-theme')
@@ -87,21 +85,18 @@ async function switchGame(wordLength) {
   }
 }
 
-async function startGame({ wordLength, forceNew = false }) {
+async function startGame({ wordLength }) {
   setPreferredWordLength(wordLength)
   await loadWords({ wordLength })
 
-  const answer = DEBUG_MODE ? getRandomAnswer() : getDailyAnswer(wordLength)
+  const answer = getDailyAnswer(wordLength)
   state = createInitialState(wordLength, answer)
 
   createGrid(gridEl, wordLength)
   createKeyboard(keyboardEl, handleKey)
   updateNavTabs(wordLength)
   trackGameStarted(wordLength)
-
-  if (!DEBUG_MODE || !forceNew) {
-    saveState(state)
-  }
+  saveState(state)
 }
 
 async function restoreGame(savedState, { showModal = true } = {}) {
@@ -169,20 +164,13 @@ function handleSubmit() {
 
     if (state.status === 'won') {
       trackGameCompleted(true, state.guesses.length, state.wordLength)
-      showToast('Zoo heev!', 2000)
-      setTimeout(() => showEndModal(state, getWordInfo(state.answer), DEBUG_MODE ? handleNewGame : null), 1000)
+      setTimeout(() => showEndModal(state, getWordInfo(state.answer), null), 1000)
     } else if (state.status === 'lost') {
       trackGameCompleted(false, state.guesses.length, state.wordLength)
       showToast(state.answer.toUpperCase(), 3000)
-      setTimeout(() => showEndModal(state, getWordInfo(state.answer), DEBUG_MODE ? handleNewGame : null), 1500)
+      setTimeout(() => showEndModal(state, getWordInfo(state.answer), null), 1500)
     }
   }, revealDelay)
-}
-
-function handleNewGame() {
-  const wordLength = state?.wordLength || getPreferredWordLength() || 4
-  clearState(wordLength)
-  startGame({ wordLength, forceNew: true })
 }
 
 async function init() {

@@ -1,6 +1,3 @@
-// Minimal analytics - anonymous usage insights only
-// No personal data, no tracking individuals, no ads
-
 function track(eventName, params = {}) {
   if (typeof gtag === 'function') {
     gtag('event', eventName, params)

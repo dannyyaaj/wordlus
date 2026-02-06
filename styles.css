@@ -1,13 +1,16 @@
 :root {
-  --color-correct: #4b3f72;
-  --color-present: #f0c75e;
+  --color-correct: #3fdc8c;
+  --color-present: #f2c94c;
   --color-absent: #2f2f33;
-  --color-accent: #6f5fa0;
+
+  --color-accent: #3fdc8c;
   --color-border: #3a3a3a;
   --color-bg: #121213;
   --color-text: #ffffff;
+
   --color-key-bg: #7a7a7d;
   --color-key-text: #ffffff;
+
   --color-toggle-bg: #2a2a2b;
   --color-toggle-text: #9a9a9a;
   --color-toggle-active-bg: #e5e5e5;
@@ -17,12 +20,15 @@
 [data-theme="light"] {
   --color-bg: #ffffff;
   --color-text: #1a1a1b;
-  --color-correct: #6b4fa3;
-  --color-present: #2f9c8f;
+
+  --color-correct: #1fbf75;
+  --color-present: #e0b200;
   --color-absent: #6e7177;
+
   --color-border: #cfd2d8;
   --color-key-bg: #d9dbe1;
   --color-key-text: #1a1a1b;
+
   --color-toggle-bg: #ececf0;
   --color-toggle-text: #555;
   --color-toggle-active-bg: #1a1a1b;
@@ -350,24 +356,69 @@ body {
   margin-top: 24px;
 }
 
-.modal-countdown {
-  font-size: 14px;
-  color: var(--color-accent);
-  margin-top: 8px;
+.modal-next-word {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.next-word-local {
+  font-size: 15px;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.next-word-utc {
+  font-size: 12px;
+  color: var(--color-toggle-text);
+  opacity: 0.7;
+}
+
+.todays-word-label {
+  font-size: 0.85rem;
+  color: var(--color-toggle-text);
+  margin-bottom: 8px;
 }
 
 .result-word {
-  margin-top: 16px;
-  font-size: 1.4rem;
+  margin-top: 8px;
+  font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.18em;
   color: var(--color-correct);
+}
+
+.result-word--win {
+  font-size: 2.2rem;
+  animation: celebrate 0.6s ease-out;
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.result-subtitle {
+  color: var(--color-toggle-text);
+  font-size: 0.95rem;
 }
 
 .result-definition {
   margin-top: 6px;
   font-size: 0.95rem;
   color: var(--color-toggle-text);
+}
+
+.part-of-speech {
+  font-style: italic;
 }
 
 .modal-buttons {

@@ -43,11 +43,6 @@ export function isValidWord(word) {
   return validWords.has(word.toLowerCase())
 }
 
-export function getRandomAnswer() {
-  const index = Math.floor(Math.random() * answers.length)
-  return answers[index]
-}
-
 export function getDailyAnswer(wordLength) {
   const today = new Date()
   const dateSeed = today.getUTCFullYear() * 10000 + (today.getUTCMonth() + 1) * 100 + today.getUTCDate()

@@ -1,24 +1,10 @@
-/**
- * Generate CSV files for Google Sheets migration
- *
- * Converts JSON word lists into CSV format suitable for Google Sheets import.
- * Run from project root: node scripts/generate-sheets-csv.js
- */
-
 const fs = require('fs')
 const path = require('path')
 
-// ============================================
-// Configuration - adjust paths if needed
-// ============================================
 const DATA_DIR = path.join(__dirname, '..', 'src', 'data')
 const OUTPUT_DIR = path.join(__dirname, '..', 'csv-export')
 
 const WORD_LENGTHS = [4, 5]
-
-// ============================================
-// Helper functions
-// ============================================
 
 function readJsonFile(filePath) {
   try {
@@ -33,7 +19,6 @@ function readJsonFile(filePath) {
 function escapeCSV(value) {
   if (value === null || value === undefined) return ''
   const str = String(value)
-  // Escape quotes and wrap in quotes if contains comma, quote, or newline
   if (str.includes(',') || str.includes('"') || str.includes('\n')) {
     return `"${str.replace(/"/g, '""')}"`
   }
@@ -47,25 +32,22 @@ function generateCSV(wordLength) {
 
   const wordsData = readJsonFile(wordsPath)
 
-  // Sort alphabetically
   const sortedWords = wordsData.words.sort((a, b) =>
     a.word.localeCompare(b.word)
   )
 
-  // Generate CSV content
   const header = 'word,partOfSpeech,definition,isAnswer,enabled,notes'
   const rows = sortedWords.map(entry => [
     escapeCSV(entry.word),
     escapeCSV(entry.partOfSpeech || ''),
     escapeCSV(entry.definition || ''),
     entry.isAnswer ? 'TRUE' : 'FALSE',
-    entry.isAnswer ? 'TRUE' : 'FALSE',  // enabled = isAnswer by default
-    ''  // notes always empty
+    entry.isAnswer ? 'TRUE' : 'FALSE',
+    ''
   ].join(','))
 
   const csvContent = [header, ...rows].join('\n')
 
-  // Write to file
   const outputFileName = `${wordLength}_letter_words.csv`
   const outputPath = path.join(OUTPUT_DIR, outputFileName)
   fs.writeFileSync(outputPath, csvContent, 'utf8')
@@ -82,14 +64,9 @@ function generateCSV(wordLength) {
   }
 }
 
-// ============================================
-// Main execution
-// ============================================
-
 function main() {
   console.log('Generating CSV files for Google Sheets migration...\n')
 
-  // Create output directory if it doesn't exist
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true })
   }
