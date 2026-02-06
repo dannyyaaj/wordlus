@@ -174,6 +174,10 @@ See [PRIVACY.md](PRIVACY.md) for details.
 
 For word list citations, releases may include build metadata: `0.1.1+words-2026-02-06`
 
+## Disclaimer
+
+This project is inspired by word-guessing games like Wordle, but is not affiliated with or endorsed by The New York Times.
+
 ## License
 
 MIT

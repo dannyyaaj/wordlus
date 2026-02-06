@@ -58,7 +58,7 @@
       "word": "chav",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "a room"
+      "definition": "room or chamber"
     },
     {
       "word": "chaw",
@@ -123,7 +123,7 @@
     {
       "word": "daim",
       "isAnswer": true,
-      "partOfSpeech": "clf",
+      "partOfSpeech": "classifier",
       "definition": "classifier for flat objects"
     },
     {
@@ -177,7 +177,7 @@
     {
       "word": "diam",
       "isAnswer": true,
-      "partOfSpeech": "interjection",
+      "partOfSpeech": "particle",
       "definition": "extremely, truly, really"
     },
     {
@@ -208,13 +208,13 @@
       "word": "feeb",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "a minute (time)"
+      "definition": "minute (time)"
     },
     {
       "word": "feem",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "a part, a portion, a fraction"
+      "definition": "part, a portion, a fraction"
     },
     {
       "word": "foom",
@@ -243,7 +243,7 @@
     {
       "word": "hauv",
       "isAnswer": true,
-      "partOfSpeech": "prep",
+      "partOfSpeech": "preposition",
       "definition": "in, inside"
     },
     {
@@ -310,7 +310,7 @@
       "word": "hmab",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "a vine"
+      "definition": "vine"
     },
     {
       "word": "hmos",
@@ -466,11 +466,7 @@
       "word": "khub",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "a pair, a couple, twins, or a set of two"
-    },
-    {
-      "word": "khuv",
-      "isAnswer": true
+      "definition": "pair, a couple, twins, or a set of two"
     },
     {
       "word": "khwv",
@@ -480,15 +476,15 @@
     },
     {
       "word": "kiab",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "market"
     },
     {
       "word": "kiag",
-      "isAnswer": true
-    },
-    {
-      "word": "kiav",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "particle",
+      "definition": "added to verbs to show immediacy or sudden action (“right away”)"
     },
     {
       "word": "koob",
@@ -498,11 +494,15 @@
     },
     {
       "word": "koog",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "an area, or territory"
     },
     {
       "word": "kooj",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "grasshopper or locust"
     },
     {
       "word": "koom",
@@ -529,12 +529,10 @@
       "definition": "to plow"
     },
     {
-      "word": "laiv",
-      "isAnswer": true
-    },
-    {
       "word": "laub",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to pour, to pour out"
     },
     {
       "word": "laug",
@@ -544,11 +542,15 @@
     },
     {
       "word": "lauj",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "can refer to the left side or left"
     },
     {
       "word": "laum",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to tickle"
     },
     {
       "word": "laus",
@@ -558,31 +560,33 @@
     },
     {
       "word": "lawd",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "particle",
+      "definition": "indicating that something is already, finished, completed action"
     },
     {
       "word": "lawm",
       "isAnswer": true,
-      "partOfSpeech": "part",
+      "partOfSpeech": "particle",
       "definition": "already, completed"
     },
     {
       "word": "lawv",
       "isAnswer": true,
-      "partOfSpeech": "pron",
+      "partOfSpeech": "pronoun",
       "definition": "they, them"
     },
     {
       "word": "leeg",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "muscle, strength"
+      "definition": "muscle, tendon, or body tissue"
     },
     {
       "word": "leej",
       "isAnswer": true,
-      "partOfSpeech": "clf",
-      "definition": "classifier for people"
+      "partOfSpeech": "classifier",
+      "definition": "classifier for people, often implying familiarity or respect (e.g., family)"
     },
     {
       "word": "lees",
@@ -597,6 +601,12 @@
       "definition": "red"
     },
     {
+      "word": "liab",
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "monkey, primate"
+    },
+    {
       "word": "liaj",
       "isAnswer": true,
       "partOfSpeech": "noun",
@@ -604,67 +614,75 @@
     },
     {
       "word": "liam",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to accuse, to slander, to denounce"
     },
     {
       "word": "looj",
-      "isAnswer": true
-    },
-    {
-      "word": "loos",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to wear or put on (especially hats, gloves, or protective gear)"
     },
     {
       "word": "luag",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to laugh, others"
+      "definition": "to smile, to laugh, or chuckle"
     },
     {
       "word": "luaj",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to cut or chop, especially weeds or brush"
     },
     {
       "word": "luam",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to copy, to trade"
+      "definition": "actions involving reproduction, copying, or scanning"
     },
     {
       "word": "luas",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "act of spreading something out (e.g., mats, blankets, or grain to dry)"
     },
     {
       "word": "luav",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "rabbit, bunny, hare"
     },
     {
       "word": "maim",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to dodge, evade, or avoid"
     },
     {
       "word": "maum",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "adj",
+      "definition": "denotes female animals (excluding birds)"
     },
     {
       "word": "meej",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "clear, obvious"
-    },
-    {
-      "word": "meem",
-      "isAnswer": true
+      "definition": "clear, evident, distinct, or easy to understand/see"
     },
     {
       "word": "mlom",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "an idol, image of worship, or statue"
     },
     {
       "word": "moos",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "hour, clock, town"
+      "definition": "clock or watch"
     },
     {
       "word": "muab",
@@ -676,7 +694,7 @@
       "word": "muag",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "eye, to sell"
+      "definition": "to sell"
     },
     {
       "word": "muaj",
@@ -688,33 +706,37 @@
       "word": "muam",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "sister"
+      "definition": "sister or a female cousin"
     },
     {
       "word": "nawb",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "particle",
+      "definition": "sentence-final word expressing excitement or intensity"
     },
     {
       "word": "ncaj",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "straight, honest"
+      "definition": "straight, upright, or direct"
     },
     {
       "word": "ncas",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "cymbal"
+      "definition": "traditional jaw (mouth) harp"
     },
     {
       "word": "ncav",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to stretch out, reach toward, or extend,"
     },
     {
       "word": "nceb",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "mushroom"
+      "definition": "mushroom or fungus"
     },
     {
       "word": "ncej",
@@ -726,43 +748,37 @@
       "word": "ncho",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to overflow, to spill"
+      "definition": "the action of emitting or producing smoke, fumes, or vapor"
     },
     {
       "word": "ncig",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to go around, circle"
-    },
-    {
-      "word": "ncis",
-      "isAnswer": true
+      "definition": "to go around, circle, surround, or travel/tour"
     },
     {
       "word": "ncov",
-      "isAnswer": true
-    },
-    {
-      "word": "ncua",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "space, distance"
+      "definition": "peak or summit, especially the top of a hill or mountain"
     },
     {
       "word": "ncus",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "throbbing or aching pain, often in the lower back or waist"
     },
     {
       "word": "neeg",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "person, people"
+      "definition": "person, human, people, or mankin"
     },
     {
       "word": "neej",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "life"
+      "definition": "life, existence, or the human condition"
     },
     {
       "word": "nees",
@@ -774,13 +790,13 @@
       "word": "niaj",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "every, daily"
+      "definition": "each or every, used for recurring time periods"
     },
     {
       "word": "niam",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "mother"
+      "definition": "mother, mom, female parent"
     },
     {
       "word": "nias",
@@ -802,13 +818,15 @@
     },
     {
       "word": "nkos",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "adj",
+      "definition": "muddy"
     },
     {
       "word": "noob",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "seed"
+      "definition": "seed, kernel, or offspring"
     },
     {
       "word": "noog",
@@ -820,19 +838,25 @@
       "word": "npaj",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to prepare"
+      "definition": "to prepare, get ready, plan, or organize"
     },
     {
       "word": "npau",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to boil, bubble up, or seethe."
     },
     {
       "word": "npav",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "placard, marking, sign"
     },
     {
       "word": "npho",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to sprinkle, scatter, or spread"
     },
     {
       "word": "npog",
@@ -841,96 +865,94 @@
       "definition": "to cover"
     },
     {
-      "word": "npoj",
-      "isAnswer": true
-    },
-    {
       "word": "npoo",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "the edge or border of something (e.g., a bed, table, or clothing)"
     },
     {
       "word": "npua",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "pig"
+      "definition": "pig, pork"
     },
     {
       "word": "nqes",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to descend, go down"
-    },
-    {
-      "word": "nqia",
-      "isAnswer": true
+      "definition": "going down, descending"
     },
     {
       "word": "nqis",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to go down, descend"
+      "definition": "go down, descend"
     },
     {
       "word": "nqos",
-      "isAnswer": true
-    },
-    {
-      "word": "nqua",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to swallow, to gulp"
     },
     {
       "word": "nqus",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to suck, vacuum"
+      "definition": "to suck, inhale, absorb, or draw in"
     },
     {
       "word": "nrab",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "middle, half"
+      "definition": "middle, center, or intermediate position"
     },
     {
       "word": "nrad",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "adv",
+      "definition": "downhill, below, down there"
     },
     {
       "word": "nram",
       "isAnswer": true,
       "partOfSpeech": "adv",
-      "definition": "down, below"
+      "definition": "downhill, below, down there"
     },
     {
       "word": "nrau",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to butt with the head or horns; to crash head-on"
     },
     {
       "word": "nres",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to stop"
+      "definition": "to stop, halt, park, or pause"
     },
     {
       "word": "nrho",
       "isAnswer": true,
-      "partOfSpeech": "adj",
-      "definition": "all, entire"
+      "partOfSpeech": "particle",
+      "definition": "completely, entirely, marks that an action is done fully or totally"
     },
     {
       "word": "nrig",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "fist"
     },
     {
       "word": "nrob",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "back, spine"
+      "definition": "back or upper back area of the body"
     },
     {
       "word": "nrog",
       "isAnswer": true,
-      "partOfSpeech": "prep",
-      "definition": "with, together"
+      "partOfSpeech": "preposition",
+      "definition": "with, together, to be in compnay of"
     },
     {
       "word": "nroj",
@@ -945,24 +967,22 @@
       "definition": "loud, noisy"
     },
     {
-      "word": "nrua",
-      "isAnswer": true
-    },
-    {
       "word": "nruj",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "tight, strict"
+      "definition": "taut, drawn tight, or rigid"
     },
     {
       "word": "ntag",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "particle",
+      "definition": "expressing exactness or strong affirmation (“exactly,” “precisely”)"
     },
     {
       "word": "ntau",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "many, much"
+      "definition": "many, much, abundant"
     },
     {
       "word": "ntej",
@@ -980,15 +1000,19 @@
       "word": "ntev",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "long"
+      "definition": "long, lengthy (referring to time or duration)"
     },
     {
       "word": "ntim",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to wrap, package, contain"
     },
     {
       "word": "ntog",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to fall or tumble to the ground"
     },
     {
       "word": "ntoo",
@@ -998,43 +1022,45 @@
     },
     {
       "word": "ntov",
-      "isAnswer": true
-    },
-    {
-      "word": "ntsa",
       "isAnswer": true,
-      "partOfSpeech": "noun",
-      "definition": "wall"
+      "partOfSpeech": "verb",
+      "definition": "to chop down or fell a tree"
     },
     {
       "word": "ntse",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "smart, sharp"
+      "definition": "smart or intelligent, sharp (of a blade)"
     },
     {
       "word": "ntso",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "particle",
+      "definition": "ambitiously; with strong effort or intensity"
     },
     {
       "word": "ntsu",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to be around or in the area of something"
     },
     {
       "word": "ntua",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "particle",
+      "definition": "immediately; right away; adds emphasis or directness to an action"
     },
     {
       "word": "ntub",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "wet"
+      "definition": "soaked, wet, or damp"
     },
     {
       "word": "ntug",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "edge, bank"
+      "definition": "sky or heaven, atmosphere or expanse above"
     },
     {
       "word": "ntuj",
@@ -1044,7 +1070,9 @@
     },
     {
       "word": "ntus",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "period of time, span or interval (often long)"
     },
     {
       "word": "ntws",
@@ -1054,19 +1082,21 @@
     },
     {
       "word": "ntxa",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "grave, tomb (as in qhov ntxa)"
     },
     {
       "word": "nyab",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "daughter-in-law"
+      "definition": "daughter-in-law, also used by a sister to refer to a brother’s wife"
     },
     {
       "word": "nyaj",
       "isAnswer": true,
-      "partOfSpeech": "noun",
-      "definition": "silver, money"
+      "partOfSpeech": "adverb",
+      "definition": "likely, indicates a probable possibility"
     },
     {
       "word": "nyem",
@@ -1078,7 +1108,7 @@
       "word": "nyob",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to live, stay, be"
+      "definition": "to live or stay, dwell, be at"
     },
     {
       "word": "nyom",
@@ -1091,10 +1121,6 @@
       "isAnswer": true,
       "partOfSpeech": "noun",
       "definition": "cow, cattle"
-    },
-    {
-      "word": "nyuv",
-      "isAnswer": true
     },
     {
       "word": "paub",
@@ -1151,80 +1177,58 @@
       "definition": "plate, dish"
     },
     {
-      "word": "pham",
-      "isAnswer": true
-    },
-    {
-      "word": "phas",
-      "isAnswer": true
-    },
-    {
       "word": "phav",
-      "isAnswer": true
-    },
-    {
-      "word": "pheb",
-      "isAnswer": true
-    },
-    {
-      "word": "phej",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "thousand (loanword from Lao/Thai, often used for money)"
     },
     {
       "word": "phem",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "bad, evil"
+      "definition": "bad, awful, evil, or ugly"
     },
     {
       "word": "phij",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "support; assistance; accompaniment (often in compounds, e.g., phij laj)"
     },
     {
       "word": "phim",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to match, be fitting or suitable"
     },
     {
       "word": "phiv",
-      "isAnswer": true
-    },
-    {
-      "word": "phob",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "adj",
+      "definition": "wrong; incorrect (loanword from Lao phit, dialect-dependent)"
     },
     {
       "word": "phom",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "gun"
-    },
-    {
-      "word": "phov",
-      "isAnswer": true
+      "definition": "gun, firearm, or cannon"
     },
     {
       "word": "phua",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to split, divide"
-    },
-    {
-      "word": "phus",
-      "isAnswer": true
+      "definition": "to split, cleave, or cut something by splitting it"
     },
     {
       "word": "phuv",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "sky, heavens, spiritual realm above"
     },
     {
       "word": "piam",
       "isAnswer": true,
       "partOfSpeech": "verb",
       "definition": "to destroy, ruin"
-    },
-    {
-      "word": "pias",
-      "isAnswer": true
     },
     {
       "word": "piav",
@@ -1242,11 +1246,7 @@
       "word": "plam",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to miss, lose"
-    },
-    {
-      "word": "plau",
-      "isAnswer": true
+      "definition": "to loosen, drop, or lose, to let something slip away"
     },
     {
       "word": "plig",
@@ -1255,32 +1255,22 @@
       "definition": "spirit, soul"
     },
     {
-      "word": "plim",
-      "isAnswer": true
-    },
-    {
       "word": "ploj",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to disappear, lost"
-    },
-    {
-      "word": "plub",
-      "isAnswer": true
+      "definition": "to disappear, to vanish, to be gone"
     },
     {
       "word": "poob",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to fall, drop"
-    },
-    {
-      "word": "poom",
-      "isAnswer": true
+      "definition": "to fall, drop, lose, or fail"
     },
     {
       "word": "puab",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "they/them, third-person plural (Green Hmong)"
     },
     {
       "word": "puag",
@@ -1307,32 +1297,22 @@
       "definition": "example, model"
     },
     {
-      "word": "qaws",
-      "isAnswer": true
-    },
-    {
       "word": "qeeb",
       "isAnswer": true,
       "partOfSpeech": "adj",
       "definition": "slow"
     },
     {
-      "word": "qees",
-      "isAnswer": true
-    },
-    {
-      "word": "qhab",
-      "isAnswer": true
-    },
-    {
       "word": "qhav",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "ginger (Green Hmong)"
     },
     {
       "word": "qheb",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to open (mouth)"
+      "definition": "to open"
     },
     {
       "word": "qhev",
@@ -1344,21 +1324,13 @@
       "word": "qhia",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to teach, tell"
+      "definition": "to teach, to inform"
     },
     {
       "word": "qhib",
       "isAnswer": true,
       "partOfSpeech": "verb",
       "definition": "to open"
-    },
-    {
-      "word": "qhob",
-      "isAnswer": true
-    },
-    {
-      "word": "qhom",
-      "isAnswer": true
     },
     {
       "word": "qhov",
@@ -1374,15 +1346,9 @@
     },
     {
       "word": "qhwv",
-      "isAnswer": true
-    },
-    {
-      "word": "quab",
-      "isAnswer": true
-    },
-    {
-      "word": "quag",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to wrap or bind, something that is wrapped, such as a bandage"
     },
     {
       "word": "quaj",
@@ -1392,7 +1358,9 @@
     },
     {
       "word": "quav",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "feces, excrement, poop, dung, or manure"
     },
     {
       "word": "raug",
@@ -1409,24 +1377,26 @@
     {
       "word": "raws",
       "isAnswer": true,
-      "partOfSpeech": "prep",
+      "partOfSpeech": "preposition",
       "definition": "according to, follow"
     },
     {
       "word": "rawv",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "adverb",
+      "definition": "indicates firmness or steadiness in an action"
     },
     {
       "word": "riam",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "knife"
+      "definition": "knife, or blade"
     },
     {
       "word": "roob",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "mountain"
+      "definition": "mountain, hill, or mountainous"
     },
     {
       "word": "rooj",
@@ -1436,7 +1406,9 @@
     },
     {
       "word": "ruam",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "adj",
+      "definition": "foolish or silly, lacking sense"
     },
     {
       "word": "saib",
@@ -1446,17 +1418,15 @@
     },
     {
       "word": "sauv",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "adverb",
+      "definition": "up above, in a higher place"
     },
     {
       "word": "sawv",
       "isAnswer": true,
       "partOfSpeech": "verb",
       "definition": "to stand, rise"
-    },
-    {
-      "word": "seeb",
-      "isAnswer": true
     },
     {
       "word": "seev",
@@ -1483,14 +1453,6 @@
       "definition": "sound, voice"
     },
     {
-      "word": "suam",
-      "isAnswer": true
-    },
-    {
-      "word": "suas",
-      "isAnswer": true
-    },
-    {
       "word": "suav",
       "isAnswer": true,
       "partOfSpeech": "verb",
@@ -1500,23 +1462,25 @@
       "word": "tais",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "bowl, grandmother"
+      "definition": "bowl, maternal grandmother (niam tais) or respected older woman"
     },
     {
       "word": "taub",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "head, gourd"
+      "definition": "head, gourd, pumpkin, or squash"
     },
     {
       "word": "taug",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to follow, walk"
+      "definition": "to follow, track, pursue, or travel"
     },
     {
       "word": "taus",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to be able or capable, to succeed in doing something"
     },
     {
       "word": "tawg",
@@ -1540,35 +1504,37 @@
       "word": "tawv",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "skin, leather, tough"
+      "definition": "skin, leather, hide, tough"
     },
     {
       "word": "teeb",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "lamp, light"
+      "definition": "lamp, light, or light bulb"
     },
     {
       "word": "teem",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to set, arrange"
+      "definition": "to stack or pile items, to arrange together"
     },
     {
       "word": "teev",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to record, list"
+      "definition": "to collect or pool together, especially liquids"
     },
     {
       "word": "tham",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to talk, chat"
+      "definition": "to talk, chat, or converse, to court or date"
     },
     {
       "word": "thau",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to withdraw or remove"
     },
     {
       "word": "them",
@@ -1578,19 +1544,15 @@
     },
     {
       "word": "thev",
-      "isAnswer": true
-    },
-    {
-      "word": "thim",
-      "isAnswer": true
-    },
-    {
-      "word": "thob",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to endure, to bear"
     },
     {
       "word": "thoj",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "a common Hmong surname"
     },
     {
       "word": "thov",
@@ -1605,12 +1567,10 @@
       "definition": "to lose, defeat"
     },
     {
-      "word": "thuv",
-      "isAnswer": true
-    },
-    {
       "word": "thwj",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "adj",
+      "definition": "right, correct, accurate"
     },
     {
       "word": "tiab",
@@ -1622,13 +1582,13 @@
       "word": "tiag",
       "isAnswer": true,
       "partOfSpeech": "adv",
-      "definition": "really, truly"
+      "definition": "being true, real, or genuine"
     },
     {
       "word": "tiaj",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "flat, plain"
+      "definition": "flat, even, level, smooth"
     },
     {
       "word": "tiam",
@@ -1644,7 +1604,9 @@
     },
     {
       "word": "toog",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "copper or brass, metal used in jewelry"
     },
     {
       "word": "tooj",
@@ -1654,57 +1616,45 @@
     },
     {
       "word": "tsab",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "a Hmong surname"
     },
     {
       "word": "tsam",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "conjunctionunction",
+      "definition": "in case, lest, perhaps"
     },
     {
       "word": "tsau",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "adj",
+      "definition": "to be full, satisfied, or stuffed after eating"
     },
     {
       "word": "tsav",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to drive"
-    },
-    {
-      "word": "tsaw",
-      "isAnswer": true
+      "definition": "driving, navigating, or steering a vehicle"
     },
     {
       "word": "tseb",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "sow, broadcast, or disperse seeds"
     },
     {
       "word": "tseg",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to stop, leave"
-    },
-    {
-      "word": "tsej",
-      "isAnswer": true
-    },
-    {
-      "word": "tsem",
-      "isAnswer": true
+      "definition": "leave behind, spare, set aside, or reserve"
     },
     {
       "word": "tsev",
       "isAnswer": true,
       "partOfSpeech": "noun",
       "definition": "house, home"
-    },
-    {
-      "word": "tshe",
-      "isAnswer": true
-    },
-    {
-      "word": "tshi",
-      "isAnswer": true
     },
     {
       "word": "tsho",
@@ -1716,49 +1666,49 @@
       "word": "tsib",
       "isAnswer": true,
       "partOfSpeech": "num",
-      "definition": "five"
+      "definition": "the number five"
     },
     {
-      "word": "tsig",
-      "isAnswer": true
+      "word": "tsib",
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "gallbladder"
     },
     {
       "word": "tsim",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to create, make"
+      "definition": "to create, make, build, produce"
     },
     {
       "word": "tsis",
       "isAnswer": true,
       "partOfSpeech": "adv",
-      "definition": "not, no"
+      "definition": "a negation word meaning not or don't, used to negate verbs"
     },
     {
       "word": "tsiv",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to move (relocate)"
+      "definition": "to move, migrate, or flee"
     },
     {
       "word": "tsob",
       "isAnswer": true,
-      "partOfSpeech": "clf",
-      "definition": "classifier for plants"
-    },
-    {
-      "word": "tsog",
-      "isAnswer": true
+      "partOfSpeech": "classifier",
+      "definition": "classifier for plants, vegetation, and trees"
     },
     {
       "word": "tsoo",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to hit, collide"
+      "definition": "to strike, bump into, or collide with something"
     },
     {
       "word": "tsos",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to release, allow, or let go"
     },
     {
       "word": "tsov",
@@ -1767,14 +1717,10 @@
       "definition": "tiger"
     },
     {
-      "word": "tsub",
-      "isAnswer": true
-    },
-    {
       "word": "tsum",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "must, need to"
+      "definition": "must, have to, stop or quit"
     },
     {
       "word": "tswb",
@@ -1783,18 +1729,16 @@
       "definition": "bell"
     },
     {
-      "word": "tswg",
-      "isAnswer": true
-    },
-    {
       "word": "tswj",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to control, manage"
+      "definition": "to control, manage, regulate, or govern"
     },
     {
       "word": "tswm",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "adj",
+      "definition": "calm, settled, or suppressed, at rest (physical or mental)"
     },
     {
       "word": "tswv",
@@ -1806,7 +1750,7 @@
       "word": "tuab",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "thick"
+      "definition": "thick, having physical thickness"
     },
     {
       "word": "tuag",
@@ -1818,13 +1762,13 @@
       "word": "tuaj",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to come"
+      "definition": "to come or arrive, indicating movement toward a place or person"
     },
     {
       "word": "tuam",
       "isAnswer": true,
       "partOfSpeech": "adj",
-      "definition": "big, great"
+      "definition": "major or important"
     },
     {
       "word": "tuav",
@@ -1836,11 +1780,7 @@
       "word": "txaj",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "bed"
-    },
-    {
-      "word": "txam",
-      "isAnswer": true
+      "definition": "bed, specifically a bedstead or bedframe"
     },
     {
       "word": "txav",
@@ -1855,26 +1795,10 @@
       "definition": "bone"
     },
     {
-      "word": "txhe",
-      "isAnswer": true
-    },
-    {
-      "word": "txia",
-      "isAnswer": true
-    },
-    {
-      "word": "txig",
-      "isAnswer": true
-    },
-    {
       "word": "txim",
       "isAnswer": true,
       "partOfSpeech": "noun",
       "definition": "punishment, crime"
-    },
-    {
-      "word": "txis",
-      "isAnswer": true
     },
     {
       "word": "txiv",
@@ -1886,73 +1810,55 @@
       "word": "txob",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "pepper"
+      "definition": "pepper or chili pepper"
     },
     {
       "word": "txog",
       "isAnswer": true,
-      "partOfSpeech": "prep",
-      "definition": "until, about"
+      "partOfSpeech": "verb",
+      "definition": "to arrive or reach, about or regarding"
     },
     {
       "word": "txoj",
       "isAnswer": true,
-      "partOfSpeech": "clf",
-      "definition": "classifier for long objects, way"
-    },
-    {
-      "word": "txom",
-      "isAnswer": true
-    },
-    {
-      "word": "txoo",
-      "isAnswer": true
-    },
-    {
-      "word": "txov",
-      "isAnswer": true
+      "partOfSpeech": "classifier",
+      "definition": "classifier for long, slender objects, way"
     },
     {
       "word": "txua",
-      "isAnswer": true
-    },
-    {
-      "word": "txub",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to build, carve, or work with wood, to whittle or craft objects"
     },
     {
       "word": "txug",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to arrive or reach; about or regarding (Green Hmong)"
     },
     {
       "word": "txuj",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "skill, art"
-    },
-    {
-      "word": "txum",
-      "isAnswer": true
-    },
-    {
-      "word": "txuv",
-      "isAnswer": true
+      "definition": "skill or method"
     },
     {
       "word": "txwj",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "respected elder or mature man"
     },
     {
       "word": "txwm",
       "isAnswer": true,
       "partOfSpeech": "adv",
-      "definition": "usually, always"
+      "definition": "a complete set, always or ever"
     },
     {
       "word": "txwv",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to forbid, prohibit"
+      "definition": "to prohibit, forbid, ban, or censure"
     },
     {
       "word": "vauv",
@@ -1961,38 +1867,40 @@
       "definition": "son-in-law"
     },
     {
-      "word": "voos",
-      "isAnswer": true
-    },
-    {
       "word": "vuag",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "a period or length of time; a specific duration"
     },
     {
       "word": "xaim",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "electrical wire, metal wire or similar materials"
     },
     {
       "word": "xais",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to pinch or massage by pinching with the fingers"
     },
     {
       "word": "xaiv",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to choose, select"
+      "definition": "to choose, select, pick"
     },
     {
       "word": "xaus",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to end, finish"
+      "definition": "ending, finishing, or concluding something"
     },
     {
       "word": "xauv",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "lock, necklace"
+      "definition": "lock, collar, or necklace"
     },
     {
       "word": "xaws",
@@ -2003,8 +1911,8 @@
     {
       "word": "xeeb",
       "isAnswer": true,
-      "partOfSpeech": "verb",
-      "definition": "to conceive, pregnant"
+      "partOfSpeech": "noun",
+      "definition": "descendants or offspring"
     },
     {
       "word": "xeem",
@@ -2014,17 +1922,15 @@
     },
     {
       "word": "xees",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "cent, a small unit of money"
     },
     {
       "word": "xeev",
       "isAnswer": true,
       "partOfSpeech": "noun",
       "definition": "state, province"
-    },
-    {
-      "word": "xiam",
-      "isAnswer": true
     },
     {
       "word": "xiav",
@@ -2034,37 +1940,39 @@
     },
     {
       "word": "xuab",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "sand or abrasive matter"
     },
     {
       "word": "xuas",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to use the hands, to handle or take"
     },
     {
       "word": "xyab",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "incense"
     },
     {
       "word": "xyaw",
-      "isAnswer": true
-    },
-    {
-      "word": "xyob",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to mix, combine, blend, or mingle"
     },
     {
       "word": "xyoo",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "year"
+      "definition": "year, used for time or age"
     },
     {
       "word": "xyov",
-      "isAnswer": true
-    },
-    {
-      "word": "yaus",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "particle",
+      "definition": "expresses uncertainty or doubt"
     },
     {
       "word": "yawg",
@@ -2076,31 +1984,31 @@
       "word": "yawm",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "grandfather (maternal)"
+      "definition": "grandfather (Hmong Green)"
     },
     {
       "word": "yeeb",
       "isAnswer": true,
       "partOfSpeech": "noun",
-      "definition": "pipe, opium"
+      "definition": "opium or tobacco"
     },
     {
       "word": "yeej",
       "isAnswer": true,
       "partOfSpeech": "verb",
-      "definition": "to win, always"
+      "definition": "to win, victory, victorious"
     },
     {
       "word": "yeem",
-      "isAnswer": true
-    },
-    {
-      "word": "yees",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "willingly or voluntarily, to agree"
     },
     {
       "word": "yias",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "a pan, skillet, or wok"
     },
     {
       "word": "yoov",
@@ -2127,26 +2035,64 @@
       "definition": "to sit"
     },
     {
-      "word": "zauv",
-      "isAnswer": true
-    },
-    {
       "word": "zaws",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to massage"
     },
     {
       "word": "zeeg",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to fall, drop, or come down"
     },
     {
       "word": "zeem",
-      "isAnswer": true
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to greet and establish kinship or friendship"
     },
     {
       "word": "zoov",
       "isAnswer": true,
       "partOfSpeech": "noun",
       "definition": "forest, jungle"
+    },
+    {
+      "word": "moob",
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "Hmong or Hmong people (Green Hmong)"
+    },
+    {
+      "word": "laaj",
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "a traditional, minced meat salad"
+    },
+    {
+      "word": "xaav",
+      "isAnswer": true,
+      "partOfSpeech": "verb",
+      "definition": "to want, to think (Green Hmong)"
+    },
+    {
+      "word": "nuav",
+      "isAnswer": true,
+      "partOfSpeech": "pronoun",
+      "definition": "this, referring to something nearby (Green Hmong)"
+    },
+    {
+      "word": "dlog",
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "green onion (Green Hmong)"
+    },
+    {
+      "word": "moov",
+      "isAnswer": true,
+      "partOfSpeech": "noun",
+      "definition": "luck, fortune, flour (Green Hmong)"
     }
   ]
 }

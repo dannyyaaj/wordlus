@@ -17,7 +17,7 @@ export function showEndModal(state, wordInfo, onNewGame) {
   const nextWordHtml = !canPlayAgain
     ? `<div class="modal-next-word">
         <p class="next-word-local">Next word at ${localTime} (local)</p>
-        <p class="next-word-utc">Resets globally at 12:00 AM UTC</p>
+        <p class="next-word-utc">Resets daily at midnight Eastern</p>
       </div>`
     : ''
 
