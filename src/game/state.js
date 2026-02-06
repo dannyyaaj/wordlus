@@ -10,7 +10,7 @@ function getTodayString() {
   return `${today.getUTCFullYear()}-${String(today.getUTCMonth() + 1).padStart(2, '0')}-${String(today.getUTCDate()).padStart(2, '0')}`
 }
 
-export function createInitialState(wordLength, answer, dialect = 'any') {
+export function createInitialState(wordLength, answer, dialect = 'white') {
   return {
     wordLength,
     dialect,
@@ -93,9 +93,9 @@ export function setPreferredWordLength(length) {
 
 export function getPreferredDialect() {
   try {
-    return localStorage.getItem('wordlus-dialect') || 'any'
+    return localStorage.getItem('wordlus-dialect') || 'white'
   } catch {
-    return 'any'
+    return 'white'
   }
 }
 

@@ -14,7 +14,7 @@ const path = require('path')
 const DATA_DIR = path.join(__dirname, '..', 'src', 'data')
 const OUTPUT_DIR = path.join(__dirname, '..', 'csv-export')
 
-const DIALECTS = ['white', 'green']
+const DIALECTS = ['white']
 const WORD_LENGTHS = [4, 5]
 
 // ============================================

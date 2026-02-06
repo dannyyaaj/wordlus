@@ -11,8 +11,9 @@ function normalizeWordEntry(entry) {
   }
 }
 
-export async function loadWords({ dialect = 'any', wordLength }) {
-  const dialects = dialect === 'any' ? ['white', 'green'] : [dialect]
+export async function loadWords({ dialect = 'white', wordLength }) {
+  // Only white dialect available for now
+  const dialects = [dialect === 'white' ? 'white' : 'white']
 
   const answerSets = []
   const allWords = []
@@ -57,7 +58,7 @@ export function getRandomAnswer() {
 export function getDailyAnswer(wordLength, dialect) {
   const today = new Date()
   const dateSeed = today.getUTCFullYear() * 10000 + (today.getUTCMonth() + 1) * 100 + today.getUTCDate()
-  const modeOffset = (wordLength === 5 ? 1000 : 0) + (dialect === 'green' ? 500 : dialect === 'any' ? 250 : 0)
+  const modeOffset = wordLength === 5 ? 1000 : 0
   const seed = dateSeed + modeOffset
   const index = seed % answers.length
   return answers[index]

@@ -17,7 +17,7 @@ A daily word game for the Hmong language.
 ## Features
 
 - 4-letter and 5-letter word modes
-- Green (Moob Leeg) and White (Hmob Dawb) dialect support
+- White Hmong (Hmoob Dawb) dialect
 - Game state persists across sessions
 - On screen keyboard with color feedback
 - Physical keyboard support
@@ -48,12 +48,7 @@ src/
 │   ├── modal.js      # End game modal with word definitions
 │   └── toast.js      # Toast notifications
 ├── data/
-│   ├── green/        # Green (Moob Leeg) dialect
-│   │   ├── 4-letter/
-│   │   │   └── words.json
-│   │   └── 5-letter/
-│   │       └── words.json
-│   └── white/        # White (Hmoob Dawb) dialect
+│   └── white/        # White Hmong (Hmoob Dawb)
 │       ├── 4-letter/
 │       │   └── words.json
 │       └── 5-letter/
@@ -120,12 +115,10 @@ Run the migration script to generate CSV files for Google Sheets:
 node scripts/generate-sheets-csv.js
 ```
 
-This creates 4 CSV files in `csv-export/`:
+This creates 2 CSV files in `csv-export/`:
 
 - `white_4_words.csv`
 - `white_5_words.csv`
-- `green_4_words.csv`
-- `green_5_words.csv`
 
 ### Schema
 
