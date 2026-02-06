@@ -303,6 +303,19 @@ body {
   opacity: 0.8;
 }
 
+.icon-btn.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(63, 220, 140, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(63, 220, 140, 0);
+  }
+}
+
 .key[data-state="correct"] {
   background: var(--color-correct);
   color: #fff;

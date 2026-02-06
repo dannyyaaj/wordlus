@@ -49,9 +49,19 @@ function setupThemeToggle() {
   })
 }
 
+function hasBeenOnboarded() {
+  return localStorage.getItem('wordlus-onboarded') === 'true'
+}
+
+function markOnboarded() {
+  localStorage.setItem('wordlus-onboarded', 'true')
+}
+
 function setupHelpButton() {
   helpBtnEl.addEventListener('click', () => {
     showHowToPlay()
+    markOnboarded()
+    helpBtnEl.classList.remove('pulse')
   })
 }
 
@@ -186,6 +196,12 @@ async function init() {
     await restoreGame(savedState)
   } else {
     await startGame({ wordLength: preferredLength })
+  }
+
+  if (!hasBeenOnboarded()) {
+    helpBtnEl.classList.add('pulse')
+    showHowToPlay()
+    markOnboarded()
   }
 }
 
