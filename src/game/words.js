@@ -43,9 +43,9 @@ export function isValidWord(word) {
   return validWords.has(word.toLowerCase())
 }
 
-export function getDailyAnswer(wordLength) {
-  const today = new Date()
-  const dateSeed = today.getUTCFullYear() * 10000 + (today.getUTCMonth() + 1) * 100 + today.getUTCDate()
+export function getDailyAnswer(wordLength, gameDate) {
+  const [y, m, d] = gameDate.split('-').map(Number)
+  const dateSeed = y * 10000 + m * 100 + d
   const modeOffset = wordLength === 5 ? 1000 : 0
   const seed = dateSeed + modeOffset
   const index = seed % answers.length

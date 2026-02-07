@@ -9,7 +9,8 @@ import {
   submitGuess,
   getCurrentRow,
   isGuessComplete,
-  isTodaysGame
+  isTodaysGame,
+  getGameDate
 } from './game/state.js'
 import { evaluateGuess, isLetter } from './game/rules.js'
 import { loadWords, isValidWord, getDailyAnswer, getWordInfo } from './game/words.js'
@@ -100,7 +101,7 @@ async function startGame({ wordLength }) {
   setPreferredWordLength(wordLength)
   await loadWords({ wordLength })
 
-  const answer = getDailyAnswer(wordLength)
+  const answer = getDailyAnswer(wordLength, getGameDate())
   state = createInitialState(wordLength, answer)
 
   createGrid(gridEl, wordLength)
@@ -114,7 +115,7 @@ async function restoreGame(savedState, { showModal = true } = {}) {
   const wordLength = savedState.wordLength
   await loadWords({ wordLength })
 
-  const answer = getDailyAnswer(wordLength)
+  const answer = getDailyAnswer(wordLength, getGameDate())
 
   state = {
     ...savedState,
@@ -183,6 +184,30 @@ function handleSubmit() {
   }, revealDelay)
 }
 
+function startDayChangeWatcher() {
+  let lastGameDate = getGameDate()
+
+  setInterval(() => {
+    const currentGameDate = getGameDate()
+    if (currentGameDate !== lastGameDate) {
+      lastGameDate = currentGameDate
+      const wordLength = state ? state.wordLength : (getPreferredWordLength() || 4)
+      startGame({ wordLength })
+    }
+  }, 30_000)
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      const currentGameDate = getGameDate()
+      if (currentGameDate !== lastGameDate) {
+        lastGameDate = currentGameDate
+        const wordLength = state ? state.wordLength : (getPreferredWordLength() || 4)
+        startGame({ wordLength })
+      }
+    }
+  })
+}
+
 async function init() {
   setupThemeToggle()
   setupHelpButton()
@@ -204,6 +229,8 @@ async function init() {
     markOnboarded()
     trackOnboardingShown()
   }
+
+  startDayChangeWatcher()
 }
 
 init()

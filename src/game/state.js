@@ -1,15 +1,13 @@
-const STORAGE_KEY_PREFIX = 'wordlus-state-v2'
+const STORAGE_KEY_PREFIX = 'wordlus-state-v3'
 const MAX_GUESSES = 6
-const RESET_HOUR_UTC = 5
+const GAME_TIMEZONE = 'America/New_York'
 
 function getStorageKey(wordLength) {
   return `${STORAGE_KEY_PREFIX}-${wordLength}`
 }
 
-function getGameDate() {
-  const now = new Date()
-  const adjusted = new Date(now.getTime() - RESET_HOUR_UTC * 60 * 60 * 1000)
-  return `${adjusted.getUTCFullYear()}-${String(adjusted.getUTCMonth() + 1).padStart(2, '0')}-${String(adjusted.getUTCDate()).padStart(2, '0')}`
+export function getGameDate() {
+  return new Date().toLocaleDateString('en-CA', { timeZone: GAME_TIMEZONE })
 }
 
 export function createInitialState(wordLength, answer) {
@@ -67,24 +65,23 @@ export function isTodaysGame(savedState) {
 
 export function getTimeUntilNextWord() {
   const now = new Date()
-  let nextReset = new Date(Date.UTC(
-    now.getUTCFullYear(),
-    now.getUTCMonth(),
-    now.getUTCDate(),
-    RESET_HOUR_UTC, 0, 0, 0
-  ))
-  if (now >= nextReset) {
-    nextReset = new Date(Date.UTC(
-      now.getUTCFullYear(),
-      now.getUTCMonth(),
-      now.getUTCDate() + 1,
-      RESET_HOUR_UTC, 0, 0, 0
-    ))
+  const todayET = now.toLocaleDateString('en-CA', { timeZone: GAME_TIMEZONE })
+  const [y, m, d] = todayET.split('-').map(Number)
+  const tom = new Date(y, m - 1, d + 1)
+  const tomorrowStr = `${tom.getFullYear()}-${String(tom.getMonth() + 1).padStart(2, '0')}-${String(tom.getDate()).padStart(2, '0')}`
+
+  let nextReset = new Date(`${tomorrowStr}T00:00:00-05:00`)
+  const checkHour = +new Intl.DateTimeFormat('en-US', {
+    timeZone: GAME_TIMEZONE, hour: 'numeric', hour12: false
+  }).format(nextReset)
+
+  if (checkHour !== 0 && checkHour !== 24) {
+    nextReset = new Date(`${tomorrowStr}T00:00:00-04:00`)
   }
+
   const diff = nextReset - now
   const hours = Math.floor(diff / (1000 * 60 * 60))
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
-
   const localTime = nextReset.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
 
   return { hours, minutes, localTime }
