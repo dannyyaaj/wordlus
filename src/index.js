@@ -178,8 +178,7 @@ function handleSubmit() {
       setTimeout(() => showEndModal(state, getWordInfo(state.answer), null), 1000)
     } else if (state.status === 'lost') {
       trackGameCompleted(false, state.guesses.length, state.wordLength)
-      showToast(state.answer.toUpperCase(), 3000)
-      setTimeout(() => showEndModal(state, getWordInfo(state.answer), null), 1500)
+      setTimeout(() => showEndModal(state, getWordInfo(state.answer), null), 1000)
     }
   }, revealDelay)
 }

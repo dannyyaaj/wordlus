@@ -65,11 +65,15 @@ export function revealRow(container, rowIndex, guess, evaluation) {
 
   guess.split('').forEach((letter, i) => {
     const cell = cells[i]
-    const delay = prefersReducedMotion ? 0 : i * 100
+    const delay = prefersReducedMotion ? 0 : i * 150
 
     setTimeout(() => {
       cell.textContent = letter
       cell.dataset.state = evaluation[i]
+      cell.classList.add('reveal')
+      cell.addEventListener('animationend', () => {
+        cell.classList.remove('reveal')
+      }, { once: true })
     }, delay)
   })
 }
