@@ -367,7 +367,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   border-radius: 8px;
-  padding: 32px;
+  padding: 24px;
   max-width: 400px;
   width: 100%;
   text-align: center;
@@ -470,8 +470,8 @@ body {
 
 .modal-btn {
   flex: 1;
-  padding: 16px;
-  font-size: 16px;
+  padding: 12px 16px;
+  font-size: 15px;
   font-weight: 700;
   border: none;
   border-radius: 4px;
@@ -537,6 +537,11 @@ body {
 
 .modal-btn.primary {
   background: var(--color-accent);
+  color: #ffffff;
+}
+
+.modal-btn.share {
+  background: var(--color-correct);
   color: #ffffff;
 }
 

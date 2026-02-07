@@ -1,4 +1,5 @@
 import { getTimeUntilNextWord } from '../game/state.js'
+import { handleShare } from './share.js'
 
 export function showEndModal(state, wordInfo, onNewGame) {
   const overlay = document.createElement('div')
@@ -17,7 +18,7 @@ export function showEndModal(state, wordInfo, onNewGame) {
   const nextWordHtml = !canPlayAgain
     ? `<div class="modal-next-word">
         <p class="next-word-local">Next word at ${localTime} (local)</p>
-        <p class="next-word-utc">Resets daily at midnight Eastern</p>
+        <p class="next-word-utc">New puzzle daily at midnight ET</p>
       </div>`
     : ''
 
@@ -29,9 +30,19 @@ export function showEndModal(state, wordInfo, onNewGame) {
     ${definitionHtml}
     ${nextWordHtml}
     <div class="modal-buttons">
+      <button class="modal-btn share" data-action="share">Share</button>
       <button class="modal-btn primary" data-action="close">${canPlayAgain ? 'Play Again' : 'Done'}</button>
     </div>
   `
+
+  modal.querySelector('[data-action="share"]').addEventListener('click', async () => {
+    const btn = modal.querySelector('[data-action="share"]')
+    const ok = await handleShare(state)
+    if (ok) {
+      btn.textContent = 'Copied!'
+      setTimeout(() => { btn.textContent = 'Share' }, 2000)
+    }
+  })
 
   modal.querySelector('[data-action="close"]').addEventListener('click', () => {
     overlay.remove()
