@@ -155,7 +155,6 @@ body {
   width: 100%;
   min-height: 0;
   overflow: hidden;
-  margin-bottom: 16px;
 }
 
 .grid {
@@ -175,7 +174,7 @@ body {
 .grid-cell {
   flex: 1;
   aspect-ratio: 1 / 1;
-  max-width: 62px;
+  max-width: 56px;
   border: 2px solid var(--color-border);
   display: flex;
   align-items: center;
@@ -312,7 +311,8 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 0 0 rgba(63, 220, 140, 0.6);
   }
   50% {
@@ -598,10 +598,6 @@ body {
     display: none;
   }
 
-  .play-area {
-    margin-bottom: 12px;
-  }
-
   .grid {
     gap: 5px;
     max-width: 300px;
@@ -705,7 +701,7 @@ body {
 
   .play-area {
     flex: none;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
   }
 
   .grid {
