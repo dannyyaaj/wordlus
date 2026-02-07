@@ -43,12 +43,18 @@ export function isValidWord(word) {
   return validWords.has(word.toLowerCase())
 }
 
+function hashSeed(n) {
+  n = ((n >> 16) ^ n) * 0x45d9f3b
+  n = ((n >> 16) ^ n) * 0x45d9f3b
+  n = (n >> 16) ^ n
+  return Math.abs(n)
+}
+
 export function getDailyAnswer(wordLength, gameDate) {
   const [y, m, d] = gameDate.split('-').map(Number)
   const dateSeed = y * 10000 + m * 100 + d
   const modeOffset = wordLength === 5 ? 1000 : 0
-  const seed = dateSeed + modeOffset
-  const index = seed % answers.length
+  const index = hashSeed(dateSeed + modeOffset) % answers.length
   return answers[index]
 }
 
