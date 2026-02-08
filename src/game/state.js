@@ -1,4 +1,4 @@
-const STORAGE_KEY_PREFIX = 'wordlus-state-v3'
+const STORAGE_KEY_PREFIX = 'wordlus-state-v4'
 const MAX_GUESSES = 6
 const GAME_TIMEZONE = 'America/New_York'
 

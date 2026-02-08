@@ -12,7 +12,7 @@ function normalizeWordEntry(entry) {
 }
 
 export async function loadWords({ wordLength }) {
-  const res = await fetch(`./src/data/${wordLength}-letter/words.json`)
+  const res = await fetch(`./src/data/${wordLength}-letter/words.json?v=0.4.0`)
   if (!res.ok) {
     console.error(`Failed to load word list for ${wordLength}-letter`)
     return { answers: [], validWords: new Set() }
@@ -44,17 +44,35 @@ export function isValidWord(word) {
 }
 
 function hashSeed(n) {
-  n = ((n >> 16) ^ n) * 0x45d9f3b
-  n = ((n >> 16) ^ n) * 0x45d9f3b
-  n = (n >> 16) ^ n
+  n = n | 0
+  n = Math.imul(n ^ (n >>> 16), 0x85ebca6b)
+  n = Math.imul(n ^ (n >>> 13), 0xc2b2ae35)
+  n = n ^ (n >>> 16)
   return Math.abs(n)
 }
 
-export function getDailyAnswer(wordLength, gameDate) {
+function dateToSeed(gameDate, modeOffset) {
   const [y, m, d] = gameDate.split('-').map(Number)
-  const dateSeed = y * 10000 + m * 100 + d
+  return y * 10000 + m * 100 + d + modeOffset
+}
+
+function getPrevDate(gameDate) {
+  const [y, m, d] = gameDate.split('-').map(Number)
+  const prev = new Date(y, m - 1, d - 1)
+  return `${prev.getFullYear()}-${String(prev.getMonth() + 1).padStart(2, '0')}-${String(prev.getDate()).padStart(2, '0')}`
+}
+
+export function getDailyAnswer(wordLength, gameDate) {
   const modeOffset = wordLength === 5 ? 1000 : 0
-  const index = hashSeed(dateSeed + modeOffset) % answers.length
+  const index = hashSeed(dateToSeed(gameDate, modeOffset)) % answers.length
+
+  const prevDate = getPrevDate(gameDate)
+  const prevIndex = hashSeed(dateToSeed(prevDate, modeOffset)) % answers.length
+
+  if (index === prevIndex) {
+    return answers[(index + 1) % answers.length]
+  }
+
   return answers[index]
 }
 
